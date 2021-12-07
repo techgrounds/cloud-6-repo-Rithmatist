@@ -19,7 +19,7 @@ Een pipe kan worden gebruikt om de uitvoer van een commando de invoer van een an
 [ack - Documentation](https://beyondgrep.com/documentation/)
 
 ### Ervaren problemen
-[Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
+geen, Ik moest alleen nog de package ack installeren met `sudo apt-get install ack`.
 
 ### Resultaat
 - *Gebruik de echo-opdracht en uitvoeromleiding om een nieuwe zin in uw tekstbestand te schrijven met behulp van de opdrachtregel. De nieuwe zin moet het woord ‘techgrounds’ bevatten.*
