@@ -14,7 +14,7 @@
     Gebruik `vi /techgrounds/file.txt` of `nano /techgrounds/file.txt` om een bestand met wat tekst te maken.
 - *Beweeg door uw directorystructuur met zowel absolute als relatieve paden*
 
-    Om van de huidige werkmap naar de techgrounds folder te gaan kunnen we gebruik maken van `absolute` en `relative` paden.
+    Om van de huidige werkmap naar de techgrounds folder te gaan kunnen we gebruik maken van `absolute` en `relatieve` paden.
 
 - **Absolute path:**
 
