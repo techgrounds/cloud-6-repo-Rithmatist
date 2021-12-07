@@ -15,6 +15,6 @@
 
 - *Lees je tekstbestand met het commando dat in de tweede stap is gebruikt, opnieuw filterend op het woord 'techgrounds'. Leid deze keer de uitvoer om naar een nieuw bestand met de naam 'techgrounds.txt'.*
 
-    Hiervoor gebruiken we de gedeeltelijk de commando van het tweede opdracht `ack 'techgrounds' atekstfile.txt > techgrounds.txt` om de output op te slaan in techgrounds.txt.
+    Hiervoor gebruiken we de gedeeltelijk commando van de tweede opdracht `ack 'techgrounds' atekstfile.txt > techgrounds.txt` om de output op te slaan in techgrounds.txt.
     
     ![ackout](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/ackout.JPG?raw=true)
