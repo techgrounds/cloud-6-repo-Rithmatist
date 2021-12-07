@@ -2,7 +2,7 @@
 ## Oefeningen:
 - *Ontdek uw huidige werkmap.*
  
-    De `~` teken is je 'home' werkmap, of gebruik `pwd` command om te zien wat de huidige werkmap is.
+    De `~` teken is uw 'home' werkmap, of gebruik `pwd` command om te zien wat de huidige werkmap is.
     
     ![pwd](https://raw.githubusercontent.com/Rithmatist/cloud-6-repo-Rithmatist/main/00_includes/pwd.JPG)
 - *Maak een lijst van alle bestanden en mappen in uw thuismap. U zou onder andere mappen als 'Desktop', 'Openbaar' en 'Afbeeldingen' moeten zien.*
@@ -12,7 +12,7 @@
     ![dirls](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/dirls.JPG?raw=true)
 - *Maak in je thuismap een nieuwe map met de naam 'techgrounds'.*
 
-    `mkdir` gebruikt u om een nieuwe map te maken. 
+    `mkdir` gebruikt u om een nieuwe map aan te maken. 
     
     ![mkdir](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/mkdir.JPG?raw=true)
 - *Maak in de techgrounds-directory een bestand met wat tekst.*
