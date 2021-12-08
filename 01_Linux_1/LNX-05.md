@@ -26,25 +26,29 @@ Geen.
 
   `sudo adduser test`
 
-  ![adduser]()
+  ![adduser](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/adduser.JPG?raw=true)
 
   - De nieuwe gebruiker moet deel uitmaken van een beheerdersgroep die ook de gebruiker bevat die u tijdens de installatie hebt gemaakt.
     `group test`
   
-    ![group]()
+    ![group](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/group.JPG?raw=true)
   
   - De nieuwe gebruiker moet een wachtwoord hebben.
   
-    ![password]()
+    ![password](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/password.JPG?raw=true)
   - De nieuwe gebruiker moet 'sudo' kunnen gebruiken
   
     `sudo usermod -aG sudo test`
     
-    ![usermod]()
+    ![usermod](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/usermod.JPG?raw=true)
 - Zoek de bestanden waarin gebruikers, wachtwoorden en groepen zijn opgeslagen. Kijk of u de gegevens van uw nieuw aangemaakte gebruiker daar kunt vinden. 
   
   `cd /`
 
   `cat /ect/passwd`
 
-  ![catpasswd]()
+  ![catpasswd](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/catpasswd.JPG?raw=true)
+  
+  Gebruiker gevonden:
+  
+  ![usertest](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/usertest.JPG?raw=true)
