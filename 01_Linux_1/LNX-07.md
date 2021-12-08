@@ -28,22 +28,22 @@ geen
 
 ### Resultaat
 
-#####Start de ssh-daemon.
+##### Start de ssh-daemon.
 `sudo service ssh start`
 
 ![sshstart](../00_includes/sshstart.JPG)
 
-#####Ontdek de PID van de ssh-daemon.       
+##### Ontdek de PID van de ssh-daemon.       
 `sudo service ssh status` | `pgrep ssh`
 
 ![pgrep](../00_includes/pgrep.JPG)
 
-#####Zoek uit hoeveel geheugen de sshd gebruikt.
+##### Zoek uit hoeveel geheugen de sshd gebruikt.
 `sudo serivce ssh status` | `sudo pmap 11338` 
 
 ![sshstatus](../00_includes/sshstatus.JPG)
 
-#####Stop of sluit het sshd-proces.
+##### Stop of sluit het sshd-proces.
 `sudo service ssh stop`
 
 ![sshstop](../00_includes/sshstop.JPG)
