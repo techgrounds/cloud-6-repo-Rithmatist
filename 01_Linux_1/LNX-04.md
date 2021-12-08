@@ -6,6 +6,8 @@ De standaarduitgang (stdout) is de terminal. Het commando 'echo hallo' zal 'hall
 Zowel de invoer als de uitvoer kunnen worden omgeleid naar een bestand in plaats van de standaard. Dit wordt invoeromleiding en uitvoeromleiding genoemd.
 Een pipe kan worden gebruikt om de uitvoer van een commando de invoer van een ander commando te laten zijn.
 ## Key-terms
+- “>” =  operator for overwriting an already existing file or a new file 
+- ">>" = operator appends an already present file or creates a new file
 - cli = command-line interface
 - cat = concatenate
 - echo = display line of text/string that are passed as an argument
