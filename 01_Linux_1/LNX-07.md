@@ -10,9 +10,9 @@ Een proces is een instantie van actieve code. Alle code wordt ergens op het syst
 - service = a process or group of processes
 - pmap = display the memory map of a process
 - ssh = secure socket shell
+- vim = vi improved
 
 ## Opdracht
-- vim = vi improved
 - Start de ssh-daemon.
 - Ontdek de PID van de ssh-daemon.
 - Zoek uit hoeveel geheugen de sshd gebruikt.
