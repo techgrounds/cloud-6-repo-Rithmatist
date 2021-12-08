@@ -10,7 +10,7 @@ Elke groep in /etc/group kan worden toegewezen als de groep van een bestand.
 - 
 
 ## Opdracht
-- [Maak een tekstbestand.](#Maak-een-tekstbestand.)
+- [Maak een tekstbestand.](#maak-een-tekstbestand.)
 - Maak een lange lijst om de machtigingen van het bestand te bekijken. Wie is de eigenaar en groep van het bestand? Welke machtigingen heeft het bestand?
 - Maak het bestand uitvoerbaar door de uitvoermachtiging (x) toe te voegen.
 - Verwijder de lees- en schrijfrechten (rw) uit het bestand voor de groep en alle anderen, maar niet voor de eigenaar. Kun je het nog lezen?
@@ -24,7 +24,8 @@ Elke groep in /etc/group kan worden toegewezen als de groep van een bestand.
 ### Ervaren problemen
 geen.
 ### Resultaat
-* **Maak een tekstbestand.**
+
+#### Maak een tekstbestand.
 
     `touch tekstbestand.txt`
 
