@@ -6,7 +6,7 @@ Elke gebruiker vermeld in /etc/passwd kan worden toegewezen als eigenaar van een
 Elke groep in /etc/group kan worden toegewezen als de groep van een bestand.
 
 ## Key-terms
-- touch = a standard command used in UNIX/Linux operating system which is used to create, change and modify timestamps of a file.
+- touch = a standard command used in Linux operating system which is used to __create, change and modify timestamps of a file.__
 - chmod = change mode (permissions)
 - chown = change owner
 - ls = long listing
@@ -30,35 +30,35 @@ Elke groep in /etc/group kan worden toegewezen als de groep van een bestand.
 geen.
 ### Resultaat
 
-#### Maak een tekstbestand.
+##### Maak een tekstbestand.
 
 `touch tekstbestand.txt`
 
-![touch]()
+![touch](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/touch.JPG?raw=true)
 
 
-#### Maak een lange lijst om de machtigingen van het bestand te bekijken. Wie is de eigenaar en groep van het bestand? Welke machtigingen heeft het bestand?
+##### Maak een lange lijst om de machtigingen van het bestand te bekijken. Wie is de eigenaar en groep van het bestand? Welke machtigingen heeft het bestand?
 
 `ls -l tekstbestand.txt`
     
-![ls]()
+![ls](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/ls.JPG?raw=true)
 
-#### Maak het bestand uitvoerbaar door de uitvoermachtiging (x) toe te voegen.
+##### Maak het bestand uitvoerbaar door de uitvoermachtiging (x) toe te voegen.
 `chmod a+x tekstbestand.txt`
 
-![chmodx]()
+![chmodx](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/chmodx.JPG?raw=true)
 
-#### Verwijder de lees- en schrijfrechten (rw) uit het bestand voor de groep en alle anderen, maar niet voor de eigenaar. Kun je het nog lezen?
+##### Verwijder de lees- en schrijfrechten (rw) uit het bestand voor de groep en alle anderen, maar niet voor de eigenaar. Kun je het nog lezen?
 `chmod go-rw tekstbestand.txt`
 
-![chmodgo-rw]()
+![chmodgo-rw](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/chmodgo-rw.JPG)
 
-#### Wijzig de eigenaar van het bestand in een andere gebruiker. Als alles goed is gegaan, zou je het bestand niet moeten kunnen lezen, tenzij je root-privileges aanneemt met 'sudo'.
+##### Wijzig de eigenaar van het bestand in een andere gebruiker. Als alles goed is gegaan, zou je het bestand niet moeten kunnen lezen, tenzij je root-privileges aanneemt met 'sudo'.
 `sudo chown test tekstbestand.txt`
 
-![chown-denied]()
+![chown-denied](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/chown-denied.JPG)
 
-#### Wijzig het groepseigendom van het bestand in een andere groep.
+##### Wijzig het groepseigendom van het bestand in een andere groep.
 `sudo chown :test tekstbestand.txt`
 
-![chowngroup]()
+![chowngroup](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/chowngroup.JPG)
