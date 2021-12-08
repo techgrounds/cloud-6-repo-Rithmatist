@@ -13,11 +13,11 @@ Elke groep in /etc/group kan worden toegewezen als de groep van een bestand.
 
 ## Opdracht
 - [Maak een tekstbestand.](#maak-een-tekstbestand)
-- [Maak een lange lijst om de machtigingen van het bestand te bekijken. Wie is de eigenaar en groep van het bestand? Welke machtigingen heeft het bestand?]()
-- [Maak het bestand uitvoerbaar door de uitvoermachtiging (x) toe te voegen.]()
-- [Verwijder de lees- en schrijfrechten (rw) uit het bestand voor de groep en alle anderen, maar niet voor de eigenaar. Kun je het nog lezen?]()
-- [Wijzig de eigenaar van het bestand in een andere gebruiker. Als alles goed is gegaan, zou je het bestand niet moeten kunnen lezen, tenzij je root-privileges aanneemt met 'sudo'.]()
-- [Wijzig het groepseigendom van het bestand in een andere groep.]()
+- [Maak een lange lijst om de machtigingen van het bestand te bekijken. Wie is de eigenaar en groep van het bestand? Welke machtigingen heeft het bestand?](#maak-een-lange-lijst-om-de-machtigingen-van-het-bestand-te-bekijken-wie-is-de-eigenaar-en-groep-van-het-bestand-welke-machtigingen-heeft-het-bestand)
+- [Maak het bestand uitvoerbaar door de uitvoermachtiging (x) toe te voegen.](#maak-het-bestand-uitvoerbaar-door-de-uitvoermachtiging-x-toe-te-voegen)
+- [Verwijder de lees- en schrijfrechten (rw) uit het bestand voor de groep en alle anderen, maar niet voor de eigenaar. Kun je het nog lezen?](#verwijder-de-lees--en-schrijfrechten-rw-uit-het-bestand-voor-de-groep-en-alle-anderen-maar-niet-voor-de-eigenaar-kun-je-het-nog-lezen)
+- [Wijzig de eigenaar van het bestand in een andere gebruiker. Als alles goed is gegaan, zou je het bestand niet moeten kunnen lezen, tenzij je root-privileges aanneemt met 'sudo'.](#wijzig-de-eigenaar-van-het-bestand-in-een-andere-gebruiker-als-alles-goed-is-gegaan-zou-je-het-bestand-niet-moeten-kunnen-lezen-tenzij-je-root-privileges-aanneemt-met-sudo)
+- [Wijzig het groepseigendom van het bestand in een andere groep.](#wijzig-het-groepseigendom-van-het-bestand-in-een-andere-groep)
 
 
 ### Gebruikte bronnen
