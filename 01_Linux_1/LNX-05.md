@@ -29,6 +29,7 @@ Geen.
   ![adduser](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/adduser.JPG?raw=true)
 
   - De nieuwe gebruiker moet deel uitmaken van een beheerdersgroep die ook de gebruiker bevat die u tijdens de installatie hebt gemaakt.
+  - 
     `group test`
   
     ![group](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/group.JPG?raw=true)
