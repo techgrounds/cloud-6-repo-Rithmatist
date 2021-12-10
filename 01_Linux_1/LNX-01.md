@@ -4,10 +4,10 @@ Linux is het populairste besturingssysteem voor servers, omdat het lichtgewicht,
 
 
 ## Key-terms
-- GUI = Graphical user interface
-- CLI = Command line interface
-- VM = Virtual Machine
-- OS = operating system 
+- GUI = Grafische gebruikersinterface
+- CLI = opdrachtregelinterface
+- VM = virtuele machine
+- OS = besturingssysteem
 ## Opdracht
 - Installeer een virtuele Ubuntu machine op uw laptop.
 - Nadat de installatie en configuratie zijn voltooid, maakt u een momentopname van de virtuele machine. Dit fungeert als controlepunt voor het geval u de machine per ongeluk (of expres) kapot maakt.

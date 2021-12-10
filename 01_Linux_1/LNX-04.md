@@ -6,13 +6,13 @@ De standaarduitgang (stdout) is de terminal. Het commando 'echo hallo' zal 'hall
 Zowel de invoer als de uitvoer kunnen worden omgeleid naar een bestand in plaats van de standaard. Dit wordt invoeromleiding en uitvoeromleiding genoemd.
 Een pipe kan worden gebruikt om de uitvoer van een commando de invoer van een ander commando te laten zijn.
 ## Key-terms
-- “>” =  operator for overwriting an already existing file or a new file 
-- ">>" = operator appends an already present file or creates a new file
-- cli = command-line interface
-- cat = concatenate
-- echo = display line of text/string that are passed as an argument
-- grep = Globally search for a Regular Expression
-- ack = Ack is designed as a replacement for 99% of the uses of grep
+- “>” = operator voor het overschrijven van een reeds bestaand bestand of een nieuw bestand
+- ">>" = operator voegt een reeds aanwezig bestand toe of maakt een nieuw bestand aan
+- cli = opdrachtregelinterface
+- kat = samenvoegen
+- echo = toon regel tekst/tekenreeks die als argument is doorgegeven
+- grep = Globaal zoeken naar een reguliere expressie
+- ack = Ack is ontworpen als vervanging voor 99% van het gebruik van grep
 ## Opdracht
 - Gebruik de echo-opdracht en uitvoeromleiding om een nieuwe zin in uw tekstbestand te schrijven met behulp van de opdrachtregel. De nieuwe zin moet het woord ‘techgrounds’ bevatten.
 - Gebruik een opdracht om de inhoud van uw tekstbestand naar de terminal te schrijven. Maak gebruik van een commando om de output te filteren zodat alleen de zin met ‘techgrounds’ verschijnt.

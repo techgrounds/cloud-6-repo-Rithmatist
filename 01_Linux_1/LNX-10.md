@@ -7,10 +7,10 @@ Om het script te kunnen uitvoeren, moet een gebruiker machtigingen hebben om het
 Linux kan het script alleen vinden als je de padnaam opgeeft, of als je het pad toevoegt aan de map waarin het script zich bevindt aan de variabele PATH.
 
 ## Key-terms
-- __bashrc__ = bashrc file is a script file that's executed when a user logs in. The file itself contains a series of configurations for the terminal session.
-- __$PATH__ = a environment variable that is file location-related.
-- __$HOME__ = an environment variable that contains the location of your home directory.
-- __$RANDOM__ = a shell variable that is used to generate random integers.
+- __bashrc__ = bashrc-bestand is een scriptbestand dat wordt uitgevoerd wanneer een gebruiker inlogt. Het bestand zelf bevat een reeks configuraties voor de terminalsessie.
+- __$PATH__ = een omgevingsvariabele die gerelateerd is aan de bestandslocatie.
+- __$HOME__ = een omgevingsvariabele die de locatie van uw thuismap bevat.
+- __$RANDOM__ = een shell-variabele die wordt gebruikt om willekeurige gehele getallen te genereren.
 
 ## Opdracht
 - [Maak een map met de naam 'scripts'. Plaats alle scripts die je maakt in deze map.](#maak-een-map-met-de-naam-scripts-plaats-alle-scripts-die-je-maakt-in-deze-map)

@@ -6,13 +6,13 @@ Telkens wanneer u een terminal opent, begint u te werken vanuit uw thuismap. Van
 Het Linux-bestandssysteem begint bij de hoofdmap, weergegeven door een schuine streep (/). Alle bestanden en mappen in Linux worden weergegeven door hun pad, beginnend bij root.
 
 ## Key-terms
-- pwd = Print working directory
-- dir = list the contents of a directory
-- ls = long listing
-- mkdir = make directory
-- vi = visual editor
-- nano = command-line text editor
-- cd = change directory
+- pwd = Werkmap weergeven
+- dir = lijst van de inhoud van een map
+- ls = lange lijst
+- mkdir = map maken
+- vi = visuele editor
+- nano = teksteditor op de opdrachtregel
+- cd = wijzig map
 
 ## Opdracht
 - Ontdek uw huidige werkmap.

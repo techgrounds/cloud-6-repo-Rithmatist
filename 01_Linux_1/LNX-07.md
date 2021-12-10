@@ -6,11 +6,11 @@ Om verbinding te maken met Linux-machines op afstand (virtueel of niet), kunt u 
 
 Een proces is een instantie van actieve code. Alle code wordt ergens op het systeem in bestanden opgeslagen. Om deze bestanden te vinden, zal Linux in de $PATH variabele kijken (daarover meer in een latere oefening). Elk proces heeft zijn eigen PID (Process ID) nummer.
 ## Key-terms
-- pgrep = a command-line utility that allows you to find the process IDs of a running program based on given criteria.
-- service = a process or group of processes
-- pmap = display the memory map of a process
-- ssh = secure socket shell
-- vim = vi improved
+- pgrep = een opdrachtregelprogramma waarmee u de proces-ID's van een lopend programma kunt vinden op basis van bepaalde criteria.
+- service = een proces of groep processen
+- pmap = toon de geheugenkaart van een proces
+- ssh = beveiligde socket-shell
+- vim = vi verbeterd
 
 ## Opdracht
 - [Start de ssh-daemon.](#start-de-ssh-daemon)

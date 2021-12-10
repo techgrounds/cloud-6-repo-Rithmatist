@@ -4,9 +4,9 @@ Er kunnen processen zijn die u volgens een regelmatig schema wilt uitvoeren. U w
 Dit soort taken kunnen worden geautomatiseerd met behulp van Cron taken.
 
 ## Key-terms
-- df = disk free
-- cron = a clock daemon
-- crontab = a UNIX command that creates a table or list of commands
+- df = schijf vrij
+- cron = een klokdaemon
+- crontab = een UNIX-opdracht die een tabel of lijst met opdrachten maakt
 
 
 ## Opdracht
