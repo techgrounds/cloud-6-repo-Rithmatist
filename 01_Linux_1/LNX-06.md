@@ -6,10 +6,10 @@ Elke gebruiker vermeld in /etc/passwd kan worden toegewezen als eigenaar van een
 Elke groep in /etc/group kan worden toegewezen als de groep van een bestand.
 
 ## Key-terms
-- touch = a standard command used in Linux operating system which is used to __create, change and modify timestamps of a file.__
-- chmod = change mode (permissions)
-- chown = change owner
-- ls = long listing
+- touch = een standaardopdracht die wordt gebruikt in het Linux-besturingssysteem en die wordt gebruikt om tijdstempels van een bestand te __creëren, wijzigen en wijzigen.__
+- chmod = modus wijzigen (machtigingen)
+- chown = van eigenaar veranderen
+- ls = lange lijst
 
 ## Opdracht
 - [Maak een tekstbestand.](#maak-een-tekstbestand)
