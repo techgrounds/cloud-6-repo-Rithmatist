@@ -44,7 +44,7 @@ geen
     ![mkdir](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/blob/main/00_includes/mkdir.JPG?raw=true)
 - *Maak in de techgrounds-directory een bestand met wat tekst.*
 
-    Gebruik `vi /techgrounds/file.txt` of `nano /techgrounds/file.txt` om een bestand met wat tekst te maken.
+    Gebruik `cat /techgrounds/file.txt` of `touch /techgrounds/file.txt` om een bestand met wat tekst te maken.
 
 - *Beweeg door uw directorystructuur met zowel absolute als relatieve paden*
 
