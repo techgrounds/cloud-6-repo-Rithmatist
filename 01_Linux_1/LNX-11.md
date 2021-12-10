@@ -10,9 +10,9 @@ Dit soort taken kunnen worden geautomatiseerd met behulp van Cron taken.
 
 
 ## Opdracht
-- [Maak een Bash-script dat de huidige datum en tijd naar een bestand in uw thuismap schrijft.](#Maak-een-Bash#script-dat-de-huidige-datum-en-tijd-naar-een-bestand-in-uw-thuismap-schrijft.)
-- [Registreer het script in je crontab zodat het elke minuut wordt uitgevoerd.](#Registreer-het-script-in-je-crontab-zodat-het-elke-minuut-wordt-uitgevoerd.)
-- [Maak een script dat beschikbare schijfruimte schrijft naar een logbestand in ‘/var/logs’. Gebruik een cron-job zodat deze wekelijks wordt uitgevoerd.](#Maak-een-script-dat-beschikbare-schijfruimte-schrijft-naar-een-logbestand-in-‘/var/logs’.-Gebruik-een-cron-job-zodat-deze-wekelijks-wordt-uitgevoerd.)
+- [Maak een Bash-script dat de huidige datum en tijd naar een bestand in uw thuismap schrijft.](#maak-een-bash#script-dat-de-huidige-datum-en-tijd-naar-een-bestand-in-uw-thuismap-schrijft.)
+- [Registreer het script in je crontab zodat het elke minuut wordt uitgevoerd.](#registreer-het-script-in-je-crontab-zodat-het-elke-minuut-wordt-uitgevoerd.)
+- [Maak een script dat beschikbare schijfruimte schrijft naar een logbestand in ‘/var/logs’. Gebruik een cron-job zodat deze wekelijks wordt uitgevoerd.](#maak-een-script-dat-beschikbare-schijfruimte-schrijft-naar-een-logbestand-in-‘/var/logs’.-gebruik-een-cron-job-zodat-deze-wekelijks-wordt-uitgevoerd.)
 
 ### Gebruikte bronnen
 - [How to Set Up a Cron Job in Linux](https://phoenixnap.com/kb/set-up-cron-job-linux)
