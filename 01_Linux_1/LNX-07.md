@@ -13,10 +13,10 @@ Een proces is een instantie van actieve code. Alle code wordt ergens op het syst
 - vim = vi improved
 
 ## Opdracht
-- Start de ssh-daemon.
-- Ontdek de PID van de ssh-daemon.
-- Zoek uit hoeveel geheugen de sshd gebruikt.
-- Stop of sluit het sshd-proces.
+- [Start de ssh-daemon.](#start-de-ssh-daemon)
+- [Ontdek de PID van de ssh-daemon.](#ontdek-de-pid-van-de-ssh-daemon)
+- [Zoek uit hoeveel geheugen de sshd gebruikt.](#zoek-uit-hoeveel-geheugen-de-sshd-gebruikt)
+- [Stop of sluit het sshd-proces.](#stop-of-sluit-het-sshd-proces)
 
 
 ### Gebruikte bronnen
