@@ -13,11 +13,11 @@ Linux kan het script alleen vinden als je de padnaam opgeeft, of als je het pad 
 - __$RANDOM__ = a shell variable that is used to generate random integers.
 
 ## Opdracht
-- Maak een map met de naam 'scripts'. Plaats alle scripts die je maakt in deze map.
-- Voeg de scriptmap toe aan de PATH-variabele.
-- Maak een script dat een regel tekst aan een tekstbestand toevoegt wanneer het wordt uitgevoerd.
-- Maak een script dat het httpd-pakket installeert, httpd activeert en httpd inschakelt. Ten slotte zou je script de status van httpd in de terminal moeten afdrukken.
-- Maak een script dat een willekeurig getal tussen 1 en 10 genereert, dit opslaat in een variabele en het getal vervolgens aan een tekstbestand toevoegt.
+- [Maak een map met de naam 'scripts'. Plaats alle scripts die je maakt in deze map.](#Maak-een-map-met-de-naam-'scripts'.-Plaats-alle-scripts-die-je-maakt-in-deze-map.)
+- [Voeg de scriptmap toe aan de PATH-variabele.](#Voeg-de-scriptmap-toe-aan-de-PATH-variabele.)
+- [Maak een script dat een regel tekst aan een tekstbestand toevoegt wanneer het wordt uitgevoerd.](#Maak-een-script-dat-een-regel-tekst-aan-een-tekstbestand-toevoegt-wanneer-het-wordt-uitgevoerd.)
+- [Maak een script dat het httpd-pakket installeert, httpd activeert en httpd inschakelt. Ten slotte zou je script de status van httpd in de terminal moeten afdrukken.](#Maak-een-script-dat-het-httpd#pakket-installeert,-httpd-activeert-en-httpd-inschakelt.-Ten-slotte-zou-je-script-de-status-van-httpd-in-de-terminal-moeten-afdrukken.)
+- [Maak een script dat een willekeurig getal tussen 1 en 10 genereert, dit opslaat in een variabele en het getal vervolgens aan een tekstbestand toevoegt.](#Maak-een-script-dat-een-willekeurig-getal-tussen-1-en-10-genereert,-dit-opslaat-in-een-variabele-en-het-getal-vervolgens-aan-een-tekstbestand-toevoegt.)
 
 ### Gebruikte bronnen
 - [How to add directory to system path in Linux](https://www.computerhope.com/issues/ch001647.htm)
