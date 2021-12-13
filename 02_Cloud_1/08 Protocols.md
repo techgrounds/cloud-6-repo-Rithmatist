@@ -28,6 +28,7 @@ Onderdeel van de afspraken die wij gemaakt hebben over protocols is dat deze mee
 
 ### Vier lagen van het TCP/IP-model
 
+![tcplayer](../00_includes/TCPIPModelW3.png)
 
 - __toepassingslaag (Application Layer):__
 1. De applicatielaag helpt u bij het identificeren van communicatiepartners, het bepalen van de beschikbaarheid van bronnen en het synchroniseren van communicatie.
@@ -49,6 +50,39 @@ Onderdeel van de afspraken die wij gemaakt hebben over protocols is dat deze mee
 - __netwerklaag (Network Interface)__
 
 Een netwerklaag is een combinatie van de datalijn en gedefinieerd in het artikel van het OSI-referentiemodel. Deze laag definieert hoe de gegevens fysiek door het netwerk moeten worden verzonden. Het bevat ook hoe bits optisch moeten worden gesignaleerd door hardware-apparaten die rechtstreeks worden gekoppeld aan een netwerkmedium, zoals coaxiale, optische, coaxiale of glasvezelkabels.
+
+### IP Header
+
+![ip packet](../00_includes/tcpip-packet-formats-and-ports.png)
+
+- 4 bits die de versie bevatten, die specificeert of het een IPv4 of IPv6 pakket is,
+- 4 bits die de Internet Header Length bevatten, dat is de lengte van de header in veelvouden van 4 bytes (bijv. 5 betekent 20 bytes).
+- 8 bits die het Type of Service bevatten, ook wel Quality of Service (QoS) genoemd, dat beschrijft welke prioriteit het pakket moet hebben,
+- 16 bits die de lengte van het pakket in bytes bevatten,
+- 16 bits die een identificatietag bevatten om het pakket uit verschillende fragmenten te helpen reconstrueren,
+- 3 bits. De eerste bevat een nul, gevolgd door een vlag die aangeeft of het pakket gefragmenteerd mag worden of niet (DF of Don't fragment), en een vlag die aangeeft of er meer fragmenten van een pakket volgen (MF of More Fragments)
+- 13 bits die de fragment offset bevatten, een veld om de positie van het fragment binnen het oorspronkelijke pakket te bepalen
+- 8 bits die de Time to live (TTL) bevatten, dat is het aantal hops (router, computer of apparaat langs een netwerk) dat het pakket mag passeren voordat het sterft (een pakket met een TTL van 16 mag bijvoorbeeld 16 routers passeren om bij zijn bestemming te komen voordat het wordt weggegooid),
+- 8 bits die het protocol bevatten (TCP, UDP, ICMP, enz.)
+- 16 bits die de Header Checksum bevatten, een getal dat wordt gebruikt bij foutdetectie,
+- 32 bits die het bron IP adres bevatten,
+- 32 bits voor het bestemmingsadres.
+
+### Over Protocollen
+Netwerkprotocollen worden door verschillende netwerk of informatietechnologie-organisaties opgesteld volgens industriële normen.
+
+De volgende groepen hebben verschillende netwerkprotocollen gedefinieerd en gepubliceerd:
+
+- [Het Institute of Electrical and Electronics Engineers](https://www.ieee.org/) (IEEE)
+- [De Internet Engineering Task Force](https://www.ietf.org/) (IETF)
+- [De Internationale Organisatie voor Normalisatie](https://www.iso.org/home.html) (ISO)
+- [De Internationale Telecommunicatie Unie](https://www.itu.int/en/Pages/default.aspx) (ITU)
+- [Het World Wide Web Consortium](https://www.w3.org/) (W3C)
+
+Hoewel netwerkprotocolmodellen over het algemeen op vergelijkbare manieren werken, is elk protocol uniek en werkt het op een specifieke manier die wordt beschreven door de organisatie die het heeft gecreëerd.
+
+
+### OSI Layer
 
 ![osi model](../00_includes/osimodel.jpg)
 
