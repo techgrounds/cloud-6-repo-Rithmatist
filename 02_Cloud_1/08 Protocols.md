@@ -25,6 +25,31 @@ Onderdeel van de afspraken die wij gemaakt hebben over protocols is dat deze mee
 
 ### Resultaat
 
+
+### Vier lagen van het TCP/IP-model
+
+
+- __toepassingslaag (Application Layer):__
+1. De applicatielaag helpt u bij het identificeren van communicatiepartners, het bepalen van de beschikbaarheid van bronnen en het synchroniseren van communicatie.
+2. het bepalen van de beschikbaarheid van bronnen en het synchroniseren van communicatie.
+3. Het stelt gebruikers in staat in te loggen op een host op afstand.
+4. Deze laag biedt verschillende e-maildiensten.
+5. Deze toepassing biedt gedistribueerde databasebronnen en toegang voor globale informatie over diverse objecten en diensten.
+
+- __transportlaag (Transport Layer)__
+1. Het verdeelt het ontvangen bericht van de sessielaag in segmenten en nummert ze om een reeks te maken.
+2. De transportlaag zorgt ervoor dat het bericht bij het juiste proces op de doelmachine wordt afgeleverd.
+3. Het zorgt er ook voor dat het volledige bericht zonder fouten aankomt, anders moet het opnieuw worden verzonden
+
+- __internetlaag (Internet Layer)__
+1. Routing protocollen
+2. Beheer van multicastgroepen
+3. toewijzing van adressen op de netwerklaag.
+
+- __netwerklaag (Network Interface)__
+
+Een netwerklaag is een combinatie van de datalijn en gedefinieerd in het artikel van het OSI-referentiemodel. Deze laag definieert hoe de gegevens fysiek door het netwerk moeten worden verzonden. Het bevat ook hoe bits optisch moeten worden gesignaleerd door hardware-apparaten die rechtstreeks worden gekoppeld aan een netwerkmedium, zoals coaxiale, optische, coaxiale of glasvezelkabels.
+
 ![osi model](../00_includes/osimodel.jpg)
 
 #### Toepassingsgeoriënteerde lagen
@@ -32,17 +57,20 @@ Onderdeel van de afspraken die wij gemaakt hebben over protocols is dat deze mee
 De bovenste lagen van het OSI-referentiemodel worden toepassingsgeoriënteerde lagen genoemd. Men maakt onderscheid tussen de toepassingslaag, de presentatielaag en de sessielaag.
 
 - __Laag 7 – toepassingslaag (application layer):__
+- Protocollen: `SMTP, HTTP, FTP, POP3, SNMP`
 1. De Applicatielaag is de bovenste laag.
 2. Het overbrengen van bestanden en het distribueren van de resultaten aan de gebruiker wordt ook in deze laag gedaan.
 3. Deze laag bevat voornamelijk applicatieprogramma's om te reageren op het ontvangen en te verzenden van gegevens.
 
 - __Laag 6 – presentatielaag (presentation layer):__
+- Protocollen: `MPEG, ASCH, SSL, TLS`
 1. De presentatielaag zorgt ervoor dat de gegevens zodanig worden verzonden dat de ontvanger de informatie (gegevens) begrijpt en in staat zal zijn de gegevens te gebruiken.
 2. Terwijl de gegevens worden ontvangen, transformeert de presentatielaag de gegevens om klaar te zijn voor de toepassingslaag.
 3. De talen (syntaxis) van de twee communicerende systemen kunnen verschillend zijn. Onder deze voorwaarde speelt de presentatielaag de rol van vertaler.
 4. Het voert gegevenscompressie, gegevenscodering, gegevensconversie enz. uit.
 
-- __Laag 5 – sessielaag (session layer):__ 
+- __Laag 5 – sessielaag (session layer):__
+- Protocollen: `NetBIOS, SAP`
 1. De Session Layer beheert en synchroniseert het gesprek tussen twee verschillende applicaties.
 2. Overdracht van gegevens van bron naar bestemming in de sessielaag Gegevensstromen worden gemarkeerd en correct opnieuw gesynchroniseerd, zodat de uiteinden van de berichten niet voortijdig worden afgebroken en gegevensverlies wordt voorkomen.
 
@@ -50,6 +78,7 @@ De bovenste lagen van het OSI-referentiemodel worden toepassingsgeoriënteerde l
 Op de drie toepassingsgeoriënteerde lagen van het OSI-model volgen vier transportgeoriënteerde lagen. Men maakt onderscheid tussen de transportlaag, de netwerklaag, de datalinklaag en de fysieke laag.
 
 - __Laag 4 – transportlaag (transport layer):__ 
+- Protocollen: 	`TCP, UDP`
 1. De transport Layer beslist of de gegevensoverdracht op een parallel pad of op een enkel pad moet plaatsvinden.
 2. Functies zoals multiplexing, segmentering of splitsing van de gegevens worden door deze laag uitgevoerd.
 3. Het ontvangt berichten van de bovenliggende sessielaag, zet het bericht om in kleinere eenheden en geeft het door aan de netwerklaag.
@@ -57,6 +86,7 @@ Op de drie toepassingsgeoriënteerde lagen van het OSI-model volgen vier transpo
 5. De transportlaag verdeelt de boodschap (data) in kleine eenheden zodat ze efficiënter worden afgehandeld door de netwerklaag.
 
 - __Laag 3 – netwerklaag (network layer):__ 
+- Protocollen: `IPV5, IPV6, ICMP, IPSEC, ARP, MPLS.`
 1. De netwerklaag leidt het signaal via verschillende kanalen van het ene knooppunt naar het andere.
 2. Het functioneert als een netwerkcontroller. Het beheert het subnet verkeer.
 3. Het bepaalt welke route gegevens moeten volgen.
@@ -64,13 +94,15 @@ Op de drie toepassingsgeoriënteerde lagen van het OSI-model volgen vier transpo
 
 
 - __Laag 2 – datalinklaag (data link layer):__ 
+- Protocollen:` RAPA, PPP, Frame Relay, ATM, Fiber Cable, etc.`
 1. De datalinklaag synchroniseert de informatie die over de fysieke laag moet worden verzonden.
 2. De belangrijkste functie van deze laag is ervoor te zorgen dat de gegevensoverdracht over de fysieke laag foutloos verloopt van het ene knooppunt naar het andere.
 3. Het opeenvolgend verzenden en ontvangen van dataframes wordt door deze laag beheerd.
 4. Deze laag verzendt en verwacht bevestigingen voor ontvangen en verzonden frames.
 5. Deze laag is een logic laag tussen twee knooppunten en het regeling van het frameverkeer over het netwerk. Het geeft een signaal aan het zendende kooppunt om te stoppen, wanneer de frame buffers vol zijn.
 
--   __Laag 1 – fysieke laag (physical layer):__ 
+- __Laag 1 – fysieke laag (physical layer):__ 
+- Protocollen:` RS232, 100BaseTX, ISDN, 11.`
 1. De fysieke laag is de onderste laag van het OSI-model. 
 2. Het activeert, onderhoudt en deactiveert de fysieke verbinding.
 3. Het is verantwoordelijk voor de verzending en ontvangst van de ongestructureerde ruwe data via het netwerk.
