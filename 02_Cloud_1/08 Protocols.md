@@ -19,11 +19,11 @@ Onderdeel van de afspraken die wij gemaakt hebben over protocols is dat deze mee
 - Facebook was recent een lange tijd niet beschikbaar. Ontdek waarom. Tip: BGP.
 
 ### Gebruikte bronnen
-[Wat is het OSI-model?](https://www.strato.nl/server/wat-is-het-osi-model/)
-[The OSI Model - Features, Principles and Layers](https://www.studytonight.com/computer-networks/complete-osi-modela)
-[OSI Model Layers and Protocols in Computer Network](https://www.guru99.com/layers-of-osi-model.html#14)
-[TCP/IP Model: What are Layers & Protocol? TCP/IP Stack](https://www.guru99.com/tcp-ip-model.html)
-[What Is a Network Protocol, and How Does It Work?](https://www.comptia.org/content/guides/what-is-a-network-protocol)
+- [Wat is het OSI-model?](https://www.strato.nl/server/wat-is-het-osi-model/)
+- [The OSI Model - Features, Principles and Layers](https://www.studytonight.com/computer-networks/complete-osi-modela)
+- [OSI Model Layers and Protocols in Computer Network](https://www.guru99.com/layers-of-osi-model.html#14)
+- [TCP/IP Model: What are Layers & Protocol? TCP/IP Stack](https://www.guru99.com/tcp-ip-model.html)
+- [What Is a Network Protocol, and How Does It Work?](https://www.comptia.org/content/guides/what-is-a-network-protocol)
 
 
 ### Ervaren problemen
