@@ -11,6 +11,35 @@ Protocols die ‘leven’ in hogere lagen van het OSI-model hebben meestal speci
 Onderdeel van de afspraken die wij gemaakt hebben over protocols is dat deze meestal een ‘standaard poort’ hebben. Voor SSH is dit poort 22.
 
 ## Key-terms
+- **TCP** = Transmissie Controle Protocol
+- **IP** = Internet Protocol
+- **HTTP** = Hypertext Transfer Protoco
+- **SMTP** = Eenvoudige mail overdracht protocol
+- **SNMP** = Eenvoudig netwerkbeheersprotocol
+- **DNS** = Domein Naam Systeem
+- **TELNET** = Terminal Netwerk
+- **FTP** = Protocol voor bestandsoverdracht
+- **POP3** = Post Office Protocol 3
+- **MPEG** = Expertsgroep voor bewegend beeld
+- **ASCII** = Amerikaanse standaardcode voor informatie-uitwisseling
+- **SSL** = Secure Sockets Layer
+- **TLS** = Transport Layer Beveiliging
+- **NetBIOS** = Netwerk Basis Invoer/Uitvoer Systeem
+- **SAP** = Systeemtoepassingen en -producten in gegevensverwerking
+- **TCP** = Transmissie Controle Protocol
+- **UDP** = Gebruikers Datagram Protocol
+- **IPV4** = Internet Protocol versie 4
+- **IPV6** = Internet Protocol versie 6
+- **ICMP** = Internet Controle Bericht Protocol
+- **IPSEC** = Internet Protocol Beveiliging
+- **ARP** = adresresolutieprotocol
+- **MPLS** = Multiprotocol Label Switching
+- **PPP** = publiek-private samenwerking
+- **Frame Relay** = een pakket-geschakelde telecommunicatiedienst
+- **ATM** = Automated Teller Machine
+- **RS232** = Recommended Standard 232
+- **100BaseTX** = Fast Ethernet over twisted pair kabels
+- **ISDN** = Digitaal Netwerk voor Geïntegreerde Diensten
 
 ## Opdracht
 - Begrijp hoe een HTTPS TCP/IP-pakket opgebouwd is
@@ -24,6 +53,7 @@ Onderdeel van de afspraken die wij gemaakt hebben over protocols is dat deze mee
 - [OSI Model Layers and Protocols in Computer Network](https://www.guru99.com/layers-of-osi-model.html#14)
 - [TCP/IP Model: What are Layers & Protocol? TCP/IP Stack](https://www.guru99.com/tcp-ip-model.html)
 - [What Is a Network Protocol, and How Does It Work?](https://www.comptia.org/content/guides/what-is-a-network-protocol)
+- [Why Did Facebook Go Down?](https://youtu.be/KU7uyi09Esw)
 
 
 ### Ervaren problemen
@@ -125,7 +155,7 @@ Op de drie toepassingsgeoriënteerde lagen van het OSI-model volgen vier transpo
 5. De transportlaag verdeelt de boodschap (data) in kleine eenheden zodat ze efficiënter worden afgehandeld door de netwerklaag.
 
 - __Laag 3 – netwerklaag (network layer):__ 
-- Protocollen: `IPV5, IPV6, ICMP, IPSEC, ARP, MPLS.`
+- Protocollen: `IPV4, IPV6, ICMP, IPSEC, ARP, MPLS.`
 1. De netwerklaag leidt het signaal via verschillende kanalen van het ene knooppunt naar het andere.
 2. Het functioneert als een netwerkcontroller. Het beheert het subnet verkeer.
 3. Het bepaalt welke route gegevens moeten volgen.
@@ -151,3 +181,11 @@ Op de drie toepassingsgeoriënteerde lagen van het OSI-model volgen vier transpo
 
 
 ![iso remember](../00_includes/iso-seven-layer-model.jpg)
+
+
+### Facebook storing 
+
+Een routine BGP update ging fout, waardoor degenen met toegang op afstand die de fout konden herstellen, werden buitengesloten. Degenen die wel fysieke toegang hebben, hebben geen autorisatie op de servers. 
+
+#### Wat is BGP?
+__Border Gateway Protocol__ (BGP) is de postdienst van het internet. Wanneer iemand een brief in een brievenbus gooit, verwerkt de postdienst dat stuk post en kiest een snelle, efficiënte route om die brief bij de ontvanger af te leveren. Op dezelfde manier is BGP, wanneer iemand gegevens via het internet verstuurt, verantwoordelijk voor het bekijken van alle beschikbare paden die de gegevens zouden kunnen afleggen en het kiezen van de beste route, wat meestal betekent dat tussen autonome systemen moet worden gewisseld.
