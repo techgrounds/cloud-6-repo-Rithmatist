@@ -49,3 +49,5 @@ Naast het opslaan van gegevens voor allerlei doeleinden (big data, opslaan van v
 ### Ervaren problemen
 
 ### Resultaat
+
+![bucket](../00_includes/bucket.JPG)
