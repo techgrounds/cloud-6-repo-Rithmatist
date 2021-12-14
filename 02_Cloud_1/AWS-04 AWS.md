@@ -27,6 +27,7 @@ Naast de verschillende diensten kunt u ook vragen verwachten over cloudconcepten
 #### bestudeer: 
 - [De AWS Certified Cloud Practitioner (CLF-C01) examengids](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf)
 ### Gebruikte bronnen
+- [De AWS Certified Cloud Practitioner (CLF-C01) examengids](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf)
 
 ### Ervaren problemen
 

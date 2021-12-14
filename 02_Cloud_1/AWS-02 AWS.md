@@ -24,6 +24,7 @@ De Total Cost of Ownership (TCO) wordt gebruikt om te meten hoeveel een infrastr
   - Altijd gratis diensten
 - Begrijp de verschillen tussen capex en opex
 ### Gebruikte bronnen
+- [Het verschil tussen Capex en Opex](https://finwin.nl/capex-opex-verschil/)
 
 ### Ervaren problemen
 

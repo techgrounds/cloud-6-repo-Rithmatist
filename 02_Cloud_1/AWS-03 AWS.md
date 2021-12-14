@@ -16,7 +16,7 @@ Je moet in staat zijn om alle zes punten uit te leggen en synoniemen te herkenne
 #### bestudeer: 
 - De zes voordelen van cloud computing.
 ### Gebruikte bronnen
-
+- [Six Advantages of Cloud Computing](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html)
 ### Ervaren problemen
 
 ### Resultaat
