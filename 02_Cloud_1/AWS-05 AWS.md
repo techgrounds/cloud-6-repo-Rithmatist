@@ -45,9 +45,20 @@ Naast het opslaan van gegevens voor allerlei doeleinden (big data, opslaan van v
 - Share the bucket website endpoint with a peer. Make sure they are able to see the website.
 
 ### Gebruikte bronnen
-
+[Bucket policy examples](https://docs.aws.amazon.com/AmazonS3/latest/userguide/example-bucket-policies.html)
 ### Ervaren problemen
 
 ### Resultaat
 
 ![bucket](../00_includes/bucket.JPG)
+
+![public](../00_includes/public-on.JPG)
+
+![upload](../00_includes/catuploaded.JPG)
+
+![policy](../00_includes/bucketpolicy.JPG)
+
+webpagina:
+`https://my-new-playground.s3.eu-central-1.amazonaws.com/screenshot-s3.png`
+
+![cat](../00_includes/screenshot-s3.png)
