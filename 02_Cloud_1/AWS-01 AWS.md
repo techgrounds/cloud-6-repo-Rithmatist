@@ -13,13 +13,27 @@ IAM is bijvoorbeeld een wereldwijde service, dus u krijgt geen controle over waa
 
 ## Opdracht
 #### Bestudeer:
-- Wat is een AWS-beschikbaarheidszone?
+- Wat is een AWS beschikbaarheidszone?
 - Wat is een regio?
-- Wat is een Edge-locatie?
+- Wat is een Edge locatie?
 - Waarom zou je de ene regio verkiezen boven de andere? (bijv. eu-central-1 (Frankfurt) over us-west-2 (Oregon)).
 
 ### Gebruikte bronnen
-
+- [Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
+- [Concepts](https://wa.aws.amazon.com/wellarchitected/2020-07-02T19-33-23/wat.concepts.wa-concepts.en.html)
 ### Ervaren problemen
 
 ### Resultaat
+
+#### Wat is een AWS beschikbaarheidszone?
+Een afzonderlijke locatie binnen een regio die is geïsoleerd van storingen in andere beschikbaarheidszones, en goedkope netwerkconnectiviteit met lage latency biedt met andere beschikbaarheidszones in dezelfde regio.
+
+#### Wat is een regio?
+Een benoemde set van AWS resources in hetzelfde geografische gebied. Een regio omvat ten minste twee beschikbaarheidszones.
+
+#### Wat is een Edge locatie?
+Een site die CloudFront gebruikt om kopieën van uw inhoud in de cache op te slaan voor snellere levering aan gebruikers op elke locatie.
+
+#### Waarom zou je de ene regio verkiezen boven de andere? (bijv. eu-central-1 (Frankfurt) over us-west-2 (Oregon)).
+Bijv. voor u-central-1 (Frankfurt) gaan omdat het meer dichterbij is dan over us-west-2 (Oregon).
+Dus dan heb je ook een beter/sneller verbinding. (low latency).
