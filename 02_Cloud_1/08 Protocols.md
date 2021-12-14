@@ -13,7 +13,7 @@ Onderdeel van de afspraken die wij gemaakt hebben over protocols is dat deze mee
 ## Key-terms
 - **TCP** = Transmissie Controle Protocol
 - **IP** = Internet Protocol
-- **HTTP** = Hypertext Transfer Protoco
+- **HTTP** = Hypertext Text Transfer Protocol
 - **SMTP** = Eenvoudige mail overdracht protocol
 - **SNMP** = Eenvoudig netwerkbeheersprotocol
 - **DNS** = Domein Naam Systeem
@@ -127,12 +127,14 @@ De bovenste lagen van het OSI-referentiemodel worden toepassingsgeoriënteerde l
 
 - __Laag 7 – toepassingslaag (application layer):__
 - Protocollen: `SMTP, HTTP, FTP, POP3, SNMP`
+- _Voorbeeld: Hypertext Transfer Protocol (HTTP) is het protocol voor de communicatie tussen een webclient en een webserver._
 1. De Applicatielaag is de bovenste laag.
 2. Het overbrengen van bestanden en het distribueren van de resultaten aan de gebruiker wordt ook in deze laag gedaan.
 3. Deze laag bevat voornamelijk applicatieprogramma's om te reageren op het ontvangen en te verzenden van gegevens.
 
 - __Laag 6 – presentatielaag (presentation layer):__
 - Protocollen: `MPEG, ASCH, SSL, TLS`
+- _Voorbeeld: MPEG is een veel gebruikt systeem voor de compressie van beeld- en geluidsbestanden._
 1. De presentatielaag zorgt ervoor dat de gegevens zodanig worden verzonden dat de ontvanger de informatie (gegevens) begrijpt en in staat zal zijn de gegevens te gebruiken.
 2. Terwijl de gegevens worden ontvangen, transformeert de presentatielaag de gegevens om klaar te zijn voor de toepassingslaag.
 3. De talen (syntaxis) van de twee communicerende systemen kunnen verschillend zijn. Onder deze voorwaarde speelt de presentatielaag de rol van vertaler.
@@ -140,14 +142,17 @@ De bovenste lagen van het OSI-referentiemodel worden toepassingsgeoriënteerde l
 
 - __Laag 5 – sessielaag (session layer):__
 - Protocollen: `NetBIOS, SAP`
+- _Voorbeeld: NetBIOS is de afkorting voor Network Basic Input Output System. NetBIOS is een datacommunicatieprotocol waarmee systemen binnen een LAN met elkaar kunnen communiceren._
 1. De Session Layer beheert en synchroniseert het gesprek tussen twee verschillende applicaties.
 2. Overdracht van gegevens van bron naar bestemming in de sessielaag Gegevensstromen worden gemarkeerd en correct opnieuw gesynchroniseerd, zodat de uiteinden van de berichten niet voortijdig worden afgebroken en gegevensverlies wordt voorkomen.
 
 #### Transportgeoriënteerde lagen
 Op de drie toepassingsgeoriënteerde lagen van het OSI-model volgen vier transportgeoriënteerde lagen. Men maakt onderscheid tussen de transportlaag, de netwerklaag, de datalinklaag en de fysieke laag.
 
-- __Laag 4 – transportlaag (transport layer):__ 
+- __Laag 4 – transportlaag (transport layer):__
 - Protocollen: 	`TCP, UDP`
+- _Voorbeeld: Het Transmission Control Protocol (tcp) is een verbindingsgeoriënteerd protocol dat veel gebruikt wordt voor gegevensoverdracht over netwerkverbindingen op het internet en op computernetwerken zoals local area networks en thuisnetwerken._
+
 1. De transport Layer beslist of de gegevensoverdracht op een parallel pad of op een enkel pad moet plaatsvinden.
 2. Functies zoals multiplexing, segmentering of splitsing van de gegevens worden door deze laag uitgevoerd.
 3. Het ontvangt berichten van de bovenliggende sessielaag, zet het bericht om in kleinere eenheden en geeft het door aan de netwerklaag.
@@ -156,6 +161,7 @@ Op de drie toepassingsgeoriënteerde lagen van het OSI-model volgen vier transpo
 
 - __Laag 3 – netwerklaag (network layer):__ 
 - Protocollen: `IPV4, IPV6, ICMP, IPSEC, ARP, MPLS.`
+- _Voorbeeld: IPsec is een standaard voor het beveiligen van internetprotocol door middel van encryptie en/of authenticatie op alle IP-pakketten._ 
 1. De netwerklaag leidt het signaal via verschillende kanalen van het ene knooppunt naar het andere.
 2. Het functioneert als een netwerkcontroller. Het beheert het subnet verkeer.
 3. Het bepaalt welke route gegevens moeten volgen.
@@ -164,6 +170,7 @@ Op de drie toepassingsgeoriënteerde lagen van het OSI-model volgen vier transpo
 
 - __Laag 2 – datalinklaag (data link layer):__ 
 - Protocollen:` RAPA, PPP, Frame Relay, ATM, Fiber Cable, etc.`
+- _Voorbeeld: Point-to-Point Protocol (PPP) is een communicatieprotocol dat wordt gebruikt om een verbinding tot stand te brengen tussen twee computers, bijvoorbeeld een PC van een gebruiker en de inbelserver van diens internetprovider._
 1. De datalinklaag synchroniseert de informatie die over de fysieke laag moet worden verzonden.
 2. De belangrijkste functie van deze laag is ervoor te zorgen dat de gegevensoverdracht over de fysieke laag foutloos verloopt van het ene knooppunt naar het andere.
 3. Het opeenvolgend verzenden en ontvangen van dataframes wordt door deze laag beheerd.
@@ -171,7 +178,8 @@ Op de drie toepassingsgeoriënteerde lagen van het OSI-model volgen vier transpo
 5. Deze laag is een logic laag tussen twee knooppunten en het regeling van het frameverkeer over het netwerk. Het geeft een signaal aan het zendende kooppunt om te stoppen, wanneer de frame buffers vol zijn.
 
 - __Laag 1 – fysieke laag (physical layer):__ 
-- Protocollen:` RS232, 100BaseTX, ISDN, 11.`
+- Protocollen:` RS232, 100BaseTX, ISDN, DSL.`
+- _Voorbeeld: DSL of digital subscriber line is een digitale datacommunicatietechniek die een relatief hoge datasnelheid mogelijk maakt over een twisted-pair-koperdraadverbinding. In het algemeen wordt voor deze verbinding een normale telefoonkabel gebruikt, die van de telefooncentrale naar de gebruiker loopt._
 1. De fysieke laag is de onderste laag van het OSI-model. 
 2. Het activeert, onderhoudt en deactiveert de fysieke verbinding.
 3. Het is verantwoordelijk voor de verzending en ontvangst van de ongestructureerde ruwe data via het netwerk.
