@@ -18,7 +18,7 @@ Instanties op aanvraag zijn de duurste optie, maar ze zijn ook het meest flexibe
 
 ## Key-terms
 
-## Opdracht
+### Oefening 1
 - Start uw sandbox-lab en open de AWS-console.
 - Navigeer naar het EC2-menu.
 - Start een EC2-instantie met de volgende vereisten:
@@ -26,24 +26,62 @@ Instanties op aanvraag zijn de duurste optie, maar ze zijn ook het meest flexibe
   - Instantietype: t2.micro
   - Standaard netwerk, geen voorkeur voor subnet
   - Beëindigingsbeveiliging: ingeschakeld
-  - Gebruikersgegevens:
+    - Gebruikersgegevens:
   
-    `#!/bin/bash
- yum -y install httpd
- systemctl enable httpd
- systemctl start httpd
- echo '<html><h1>Hello From Your Web Server!</h1></html>' > /var/www/html/index.html`
+          #!/bin/bash
+          yum -y install httpd
+          systemctl enable httpd
+          systemctl start httpd
+          echo '<html><h1>Hello From Your Web Server!</h1></html>' > /var/www/html/index.html
   - Rootvolume: SSD voor algemeen gebruik, Grootte: 8 GiB
   - Nieuwe beveiligingsgroep:
   - Naam: Webserver SG
   - Regels: Sta SSH, HTTP en HTTPS overal toe
   - Key Pair: vockey (deze is te downloaden vanuit de sandbox lab-omgeving)
   
+### Oefening 2
+- Wacht tot de Status Checks uit de initialisatiefase zijn. Wanneer je op de Status Checks tab klikt, zou je moeten zien dat de System reachability en de Instance reachability checks geslaagd zijn.
+- Zoek de EC2 systeem logs. Controleer of het HTTP pakket is geïnstalleerd.
 
-- Wacht tot de statuscontroles uit de initialisatiefase komen. Wanneer u op het tabblad Statuscontroles klikt, zou u moeten zien dat de controles voor de bereikbaarheid van het systeem en de bereikbaarheid van de instantie zijn geslaagd.
+### Oefening 3
+- Stop uw EC2 instance (niet beëindigen).
+- Verander het instance type in een t2.small.
+- Verander de grootte van het EBS volume in 10 GiB.
+- Start je EC2 instance.
+
+### Oefening 4
+- Terminate your EC2 instance.
+
+_Tip: you must first disable termination protection._
 
 ### Gebruikte bronnen
 
 ### Ervaren problemen
 
 ### Resultaat
+
+#### Oefening 1:
+
+![](../00_includes/ec2.JPG)
+
+#### Oefening 2:
+
+![](../00_includes/healthcheck.JPG)
+
+![](../00_includes/systemlog.JPG)
+
+#### Oefening 3:
+
+![](../00_includes/10gb.JPG)
+
+![](../00_includes/t2small.JPG)
+
+![](../00_includes/running.JPG)
+
+#### Oefening 4:
+
+![](../00_includes/prooff.JPG)
+
+![](../00_includes/terminated.JPG)
+
+![](../00_includes/tercomfirmed.JPG)

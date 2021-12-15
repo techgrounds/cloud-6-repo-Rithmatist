@@ -59,6 +59,14 @@ Naast het opslaan van gegevens voor allerlei doeleinden (big data, opslaan van v
 ![policy](../00_includes/bucketpolicy.JPG)
 
 webpagina:
-`https://my-new-playground.s3.eu-central-1.amazonaws.com/screenshot-s3.png`
+https://my-new-playground.s3.eu-central-1.amazonaws.com/screenshot-s3.png
 
 ![cat](../00_includes/screenshot-s3.png)
+
+#### Oefening 2
+
+![static](../00_includes/static.JPG)
+
+link: http://mydemo-site.s3-website.eu-central-1.amazonaws.com/
+
+![aws-site](../00_includes/aws-site.JPG)

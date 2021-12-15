@@ -116,6 +116,7 @@ De volgende groepen hebben verschillende netwerkprotocollen gedefinieerd en gepu
 
 Hoewel netwerkprotocolmodellen over het algemeen op vergelijkbare manieren werken, is elk protocol uniek en werkt het op een specifieke manier die wordt beschreven door de organisatie die het heeft gecreëerd.
 
+Dus bij een van deze organisaties kan er een voorstel gedaan worden om een nieuwe protocol te introduceren.
 
 ### OSI Layer
 
