@@ -60,28 +60,28 @@ _Tip: you must first disable termination protection._
 
 ### Resultaat
 
-#### Oefening 1:
+### Oefening 1:
 
-![](../00_includes/ec2.JPG)
+![ec2](../00_includes/ec2.JPG)
 
-#### Oefening 2:
+### Oefening 2:
 
-![](../00_includes/healthcheck.JPG)
+![healthcheck](../00_includes/healthcheck.JPG)
 
-![](../00_includes/systemlog.JPG)
+![systemlog](../00_includes/systemlog.JPG)
 
-#### Oefening 3:
+### Oefening 3:
 
-![](../00_includes/10gb.JPG)
+![10gb](../00_includes/10gb.JPG)
 
-![](../00_includes/t2small.JPG)
+![t2small](../00_includes/t2small.JPG)
 
-![](../00_includes/running.JPG)
+![running](../00_includes/running.JPG)
 
-#### Oefening 4:
+### Oefening 4:
 
-![](../00_includes/prooff.JPG)
+![prooff](../00_includes/prooff.JPG)
 
-![](../00_includes/terminated.JPG)
+![terminated](../00_includes/terminated.JPG)
 
-![](../00_includes/tercomfirmed.JPG)
+![tercomfirmed](../00_includes/tercomfirmed.JPG)
