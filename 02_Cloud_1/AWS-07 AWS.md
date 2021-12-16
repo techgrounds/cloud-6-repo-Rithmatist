@@ -52,24 +52,35 @@ EC2 instance was niet bereikbaar met ssh.
 
 ### Oefening 1
 
-![](../00_includes/ec2boot.JPG)
-![](../00_includes/ebs.JPG)
-![](../00_includes/ec3ebs.JPG)
-![](../00_includes/attachebs.JPG)
+![ec2boot](../00_includes/ec2boot.JPG)
+
+![ebs](../00_includes/ebs.JPG)
+
+![ec3ebs](../00_includes/ec3ebs.JPG)
+
+![attachebs](../00_includes/attachebs.JPG)
 
 ### Oefening 2
-![](../00_includes/dfh.JPG)
-![](../00_includes/blocks.JPG)
-![](../00_includes/file-s.JPG)
-![](../00_includes/mounted.JPG)
-![](../00_includes/filemade.JPG)
+![dfh](../00_includes/dfh.JPG)
+
+![blocks](../00_includes/blocks.JPG)
+
+![file-s](../00_includes/file-s.JPG)
+
+![mounted](../00_includes/mounted.JPG)
+
+![filemade](../00_includes/filemade.JPG)
 
 ### Oefening 3
 
-![](../00_includes/snapshot.JPG)
-![](../00_includes/removefile.JPG)
-![](../00_includes/unmountconfirmed.JPG)
-![](../00_includes/newdisk.JPG)
-![](../00_includes/backupworks.JPG)
+![snapshot](../00_includes/snapshot.JPG)
+
+![removefile](../00_includes/removefile.JPG)
+
+![unmountconfirmed](../00_includes/unmountconfirmed.JPG)
+
+![newdisk](../00_includes/newdisk.JPG)
+
+![backupworks](../00_includes/backupworks.JPG)
 
 
