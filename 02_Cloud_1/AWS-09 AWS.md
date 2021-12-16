@@ -16,7 +16,10 @@ Standaard is een NACL geconfigureerd om al het verkeer in en uit het netwerk toe
 - Beveiligingsgroepen in AWS
 - Netwerktoegangscontrolelijsten in AWS
 ### Gebruikte bronnen
-
+- [Security groups for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html)
+- [Amazon EC2 Security Groups Tutorial](https://www.youtube.com/watch?v=nA3yN76cNxo)
+- [Network ACLs](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html)
+- [AWS Network Access Control List | AWS NACL | NACL](https://www.youtube.com/watch?v=tLAgYQlMWGo)
 ### Ervaren problemen
 
 ### Resultaat
