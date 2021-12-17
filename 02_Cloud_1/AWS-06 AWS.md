@@ -61,24 +61,55 @@ _Tip: you must first disable termination protection._
 ### Resultaat
 
 ### Oefening 1:
-
+- Start uw sandbox-lab en open de AWS-console.
+- Navigeer naar het EC2-menu.
+- Start een EC2-instantie met de volgende vereisten:
+  - AMI: Amazon Linux 2 AMI (HVM), SSD-volumetype
+  - Instantietype: t2.micro
+  - Standaard netwerk, geen voorkeur voor subnet
+  - Beëindigingsbeveiliging: ingeschakeld
+    - Gebruikersgegevens:
+  
+          #!/bin/bash
+          yum -y install httpd
+          systemctl enable httpd
+          systemctl start httpd
+          echo '<html><h1>Hello From Your Web Server!</h1></html>' > /var/www/html/index.html
+  - Rootvolume: SSD voor algemeen gebruik, Grootte: 8 GiB
+  - Nieuwe beveiligingsgroep:
+  - Naam: Webserver SG
+  - Regels: Sta SSH, HTTP en HTTPS overal toe
+  - Key Pair: vockey (deze is te downloaden vanuit de sandbox lab-omgeving)
 ![ec2](../00_includes/ec2.JPG)
 
 ### Oefening 2:
 
+- Wacht tot de Status Checks uit de initialisatiefase zijn. Wanneer je op de Status Checks tab klikt, zou je moeten zien dat de System reachability en de Instance reachability checks geslaagd zijn.
+
 ![healthcheck](../00_includes/healthcheck.JPG)
+
+- Zoek de EC2 systeem logs. Controleer of het HTTP pakket is geïnstalleerd.
 
 ![systemlog](../00_includes/systemlog.JPG)
 
 ### Oefening 3:
 
-![10gb](../00_includes/10gb.JPG)
+- Stop uw EC2 instance (niet beëindigen).
+- Verander het instance type in een t2.small.
 
 ![t2small](../00_includes/t2small.JPG)
+
+- Verander de grootte van het EBS volume in 10 GiB.
+
+![10gb](../00_includes/10gb.JPG)
+
+- Start je EC2 instance.
 
 ![running](../00_includes/running.JPG)
 
 ### Oefening 4:
+
+- Terminate your EC2 instance.
 
 ![prooff](../00_includes/prooff.JPG)
 

@@ -37,18 +37,26 @@ Naast het opslaan van gegevens voor allerlei doeleinden (big data, opslaan van v
 - Deel de object-URL van uw kattenfoto met een peer. Zorg ervoor dat ze de foto kunnen zien.
 
 
-- Create new bucket with the following requirements:
-  - Region: Frankfurt (eu-central-1)
-  - Public access enabled
-- Upload the four files that make up AWS’ demo website.
-- Enable static website hosting.
-- Share the bucket website endpoint with a peer. Make sure they are able to see the website.
+- Maak een nieuwe emmer aan met de volgende vereisten:
+  - Regio: Frankfurt (eu-centraal-1)
+  - Publieke toegang ingeschakeld
+- Upload de vier bestanden die samen de demo website van AWS vormen.
+- Schakel statische website hosting in.
+- Deel de bucket website endpoint met een peer. Zorg ervoor dat zij de website kunnen zien.
 
 ### Gebruikte bronnen
 [Bucket policy examples](https://docs.aws.amazon.com/AmazonS3/latest/userguide/example-bucket-policies.html)
 ### Ervaren problemen
 
 ### Resultaat
+
+### Oefening 1
+
+- Start uw sandbox-lab en open de AWS-console.
+- Navigeer naar het S3-menu.
+- Maak een nieuwe bucket met de volgende vereisten:
+  - Regio: Frankfurt (eu-central-1)
+  - Openbare toegang ingeschakeld
 
 ![bucket](../00_includes/bucket.JPG)
 
@@ -58,15 +66,25 @@ Naast het opslaan van gegevens voor allerlei doeleinden (big data, opslaan van v
 
 ![policy](../00_includes/bucketpolicy.JPG)
 
+- Upload een kattenfoto naar je emmer.
+- Deel de object-URL van uw kattenfoto met een peer. Zorg ervoor dat ze de foto kunnen zien.
+
 webpagina:
 https://my-new-playground.s3.eu-central-1.amazonaws.com/screenshot-s3.png
 
 ![cat](../00_includes/screenshot-s3.png)
 
-#### Oefening 2
+### Oefening 2
+
+- Maak een nieuwe emmer aan met de volgende vereisten:
+  - Regio: Frankfurt (eu-centraal-1)
+  - Publieke toegang ingeschakeld
+- Upload de vier bestanden die samen de demo website van AWS vormen.
+- Schakel statische website hosting in.
+- Deel de bucket website endpoint met een peer. Zorg ervoor dat zij de website kunnen zien.
 
 ![static](../00_includes/static.JPG)
 
-link: http://mydemo-site.s3-website.eu-central-1.amazonaws.com/
+webpagina: http://mydemo-site.s3-website.eu-central-1.amazonaws.com/
 
 ![aws-site](../00_includes/aws-site.JPG)
