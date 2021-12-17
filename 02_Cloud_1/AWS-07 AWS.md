@@ -52,34 +52,66 @@ EC2 instance was niet bereikbaar met ssh.
 
 ### Oefening 1
 
+- Start uw sandbox-lab en open de AWS-console.
 ![ec2boot](../00_includes/ec2boot.JPG)
-
+- Navigeer naar het EC2-menu.
+- Maak een t2.micro Amazon Linux 2-machine met alle standaardinstellingen (de sleutel kan worden gedownload van het sandbox-lab)
+- Maak een nieuw EBS-volume aan met de volgende vereisten:
+  - Volumetype: SSD voor algemeen gebruik (gp2)
+  - Maat: 1 GiB
+  - Beschikbaarheidszone: hetzelfde als uw EC2
 ![ebs](../00_includes/ebs.JPG)
-
+- Wacht tot de status beschikbaar is.
 ![ec3ebs](../00_includes/ec3ebs.JPG)
 
+### Oefening 2
+- Koppel uw nieuwe EBS-volume aan uw EC2-instantie.
 ![attachebs](../00_includes/attachebs.JPG)
 
-### Oefening 2
+- Maak verbinding met uw EC2-instantie via SSH.
+
 ![dfh](../00_includes/dfh.JPG)
+
+Hier bekijken we informatie over alle beschikbare blokapparaten.
 
 ![blocks](../00_includes/blocks.JPG)
 
+Indien het apparaat een bestandssysteem heeft, toont het commando informatie over het bestandssysteemtype. 
+
 ![file-s](../00_includes/file-s.JPG)
 
+- Koppel het EBS-volume op uw instantie. 
+
 ![mounted](../00_includes/mounted.JPG)
+
+- Maak een tekstbestand en schrijf het naar het gekoppelde EBS-volume.
 
 ![filemade](../00_includes/filemade.JPG)
 
 ### Oefening 3
 
+- Maak een momentopname van uw EBS-volume.
+
 ![snapshot](../00_includes/snapshot.JPG)
+
+- Verwijder het tekstbestand van uw oorspronkelijke EBS-volume.
 
 ![removefile](../00_includes/removefile.JPG)
 
+- Koppel uw originele EBS-volume los.
+
 ![unmountconfirmed](../00_includes/unmountconfirmed.JPG)
 
+- Maak een nieuw volume met uw snapshot.
+
+  Gedaan via de interface.
+
+
+- Bevestig het nieuwe volume aan uw EC2 en koppel het.
+
 ![newdisk](../00_includes/newdisk.JPG)
+
+- Zoek uw tekstbestand op het nieuwe EBS-volume.
 
 ![backupworks](../00_includes/backupworks.JPG)
 

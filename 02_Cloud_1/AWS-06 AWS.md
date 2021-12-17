@@ -50,9 +50,9 @@ Instanties op aanvraag zijn de duurste optie, maar ze zijn ook het meest flexibe
 - Start je EC2 instance.
 
 ### Oefening 4
-- Terminate your EC2 instance.
+- Beëindig uw EC2 instance.
 
-_Tip: you must first disable termination protection._
+_Tip: je moet eerst de afsluitbeveiliging uitschakelen._
 
 ### Gebruikte bronnen
 
@@ -80,6 +80,10 @@ _Tip: you must first disable termination protection._
   - Naam: Webserver SG
   - Regels: Sta SSH, HTTP en HTTPS overal toe
   - Key Pair: vockey (deze is te downloaden vanuit de sandbox lab-omgeving)
+  
+
+  **Resultaat van Oefening 1:**
+
 ![ec2](../00_includes/ec2.JPG)
 
 ### Oefening 2:
@@ -109,7 +113,7 @@ _Tip: you must first disable termination protection._
 
 ### Oefening 4:
 
-- Terminate your EC2 instance.
+- Beëindig uw EC2 instance.
 
 ![prooff](../00_includes/prooff.JPG)
 
