@@ -16,3 +16,7 @@ Een Local Area Network (LAN) wordt vaak uitgedrukt als een reeks IP-adressen. El
 ### Ervaren problemen
 
 ### Resultaat
+
+
+![netwerk](../00_includes/netwerk.png)
+

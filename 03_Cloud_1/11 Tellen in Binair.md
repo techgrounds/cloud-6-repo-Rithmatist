@@ -9,27 +9,28 @@ Een computer is een machine die alleen kan werken met 1 en 0. Hij kan alle berek
 - Vertaal de volgende bytes in decimalen.
 
 ### Gebruikte bronnen
-
+- [How To Convert Decimal to Binary](https://www.youtube.com/watch?v=rsxT4FfRBaM)
+- [How To Convert Binary To Decimal](https://www.youtube.com/watch?v=VLflTjd3lWA)
 ### Ervaren problemen
 
 ### Resultaat
 
 - Vertaal de decimalen in binair:
 
-| Decimaal | Binair |
-|----------|--------|
-| 16       |        |
-| 128      |        |
-| 228      |        |
-| 112      |        |
-| 73       |        |
+| Binair 	| Decimaal  	|
+|--------	|-----------	|
+| 16     	| 10000     	|
+| 128    	| 1000 0000 	|
+| 228    	| 1110 0100 	|
+| 112    	| 1110 000  	|
+| 73     	| 1001 001  	|
 
 - Vertaal de volgende bytes in decimalen:
 
-| Binair    | Decimaal |
-|-----------|----------|
-| 1010 1010 |          |
-| 1111 0000 |          |
-| 1101 1011 |          |
-| 1010 0000 |          |
-| 0011 1010 |          |
+| Binair    	| Decimaal 	|
+|-----------	|----------	|
+| 1010 1010 	| 170      	|
+| 1111 0000 	| 240      	|
+| 1101 1011 	| 219      	|
+| 1010 0000 	| 160      	|
+| 0011 1010 	| 58       	|
