@@ -5,6 +5,8 @@ Het Shared Responsibility Model beschrijft wie verantwoordelijk is voor welk dee
 ## Opdracht
 
 ### Gebruikte bronnen
+- [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
+- [AWS Shared Responsibility Model](https://www.youtube.com/watch?v=iODPCcQEPto)
 
 #### Bestudeer:
 - The AWS Shared Responsibility Model
