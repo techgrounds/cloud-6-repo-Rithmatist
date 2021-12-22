@@ -3,6 +3,13 @@
 AWS and Azure offer services that are similar to what network appliances do. Every networking concept (routing, switching, gateways) has one or more cloud equivalents. Your network devices keep working even as you add or remove computers from your network. Protocols are important in this.
 ## Key-terms
 
+- **DHCP** = Dynamisch Host Configuratie Protocol
+- **MAC** adres = Media Access Control adres
+- **WPA2** = Wi-Fi Protected Access 2
+- **AES** = Geavanceerde Standaard Encryptie
+- **TKIP** = Protocol voor tijdelijke sleutelintegriteit
+- **WPS** = Wi-Fi Beschermde setup
+
 ## Opdracht
 - Benoem en beschrijf de functies van veel voorkomend netwerkapparatuur
 - Meeste routers hebben een overzicht van alle verbonden apparaten, vindt deze lijst. Welke andere informatie heeft de router over aangesloten apparatuur?
@@ -14,6 +21,7 @@ AWS and Azure offer services that are similar to what network appliances do. Eve
 
 - [Network Devices Explained](https://blog.netwrix.com/2019/01/08/network-devices-explained/)
 - [Computer Network Devices](https://www.youtube.com/watch?v=yYe6Mh9fig0)
+- [What is enterprise networking?](https://www.vmware.com/topics/glossary/content/enterprise-networking.html)
 
 ### Ervaren problemen
 
@@ -28,23 +36,23 @@ AWS and Azure offer services that are similar to what network appliances do. Eve
 
 - **switch**
 
-    Een switch is een apparaat dat beperkte routeringsinformatie over knooppunten in het interne netwerk bijhoudt. **Een switch kan zowel op de datalinklaag als op de netwerklaag van het OSI model werken.** Switches kunnen het doelwit zijn van DDoS-aanvallen (Distributed Denial of Service).    
+    Een switch is een apparaat dat beperkte routeringsinformatie over knooppunten in het interne netwerk bijhoudt. **Een switch kan zowel op de datalinklaag als op de netwerklaag van het OSI-model werken.** Switches kunnen het doelwit zijn van DDoS-aanvallen (Distributed Denial of Service).    
 
 
 - **Router**
 
     Routers banen zich een weg door de zee van onderling verbonden netwerkapparaten die verschillende netwerktopologieën gebruiken. Ze zijn de eerste verdedigingslinie en moeten worden geconfigureerd om alleen geautoriseerd verkeer door te laten. Routers kunnen ook intern worden verbonden met andere routers, waardoor zones ontstaan die onafhankelijk werken. Routers zijn apparaten voor algemeen gebruik die twee of meer heterogene netwerken met elkaar verbinden. Zij vormen de ruggengraat van grote computernetwerken zoals het internet. 
-    **Routers werken op de netwerklaag van het OSI model.** De routeringstabel bepaalt welke routes een pakket kan nemen van zijn bron naar zijn bestemming.
+    **Routers werken op de netwerklaag van het OSI-model.** De routeringstabel bepaalt welke routes een pakket kan nemen van zijn bron naar zijn bestemming.
   
 
 - **Bridge**
 
-    Bridges worden gebruikt om twee of meer hosts of netwerksegmenten met elkaar te verbinden. Ze filteren inkomende gegevenspakketten, frames genoemd, op adressen voordat ze worden doorgestuurd. Bridges kunnen ook worden gebruikt om grotere netwerken in kleinere secties te verdelen door tussen twee fysieke netwerksegmenten te gaan zitten. **Bridges werken alleen op de fysieke en gegevensverbindingslagen van het OSI model.**
+    Bridges worden gebruikt om twee of meer hosts of netwerksegmenten met elkaar te verbinden. Ze filteren inkomende gegevenspakketten, frames genoemd, op adressen voordat ze worden doorgestuurd. Bridges kunnen ook worden gebruikt om grotere netwerken in kleinere secties te verdelen door tussen twee fysieke netwerksegmenten te gaan zitten. **Bridges werken alleen op de fysieke en gegevensverbindingslagen van het OSI-model.**
 
 
 - **Gateway**
 
-    **Gateways werken gewoonlijk op de Transport- en Session-lagen van het OSI model.** Op de Transportlaag en daarboven zijn er talrijke protocollen en standaarden van verschillende verkopers; gateways worden gebruikt om daarmee om te gaan. Gateways zorgen voor de vertaling tussen netwerktechnologieën zoals Open System Interconnection (OSI) en Transmission Control Protocol/Internet Protocol (TCP/IP). Hierdoor verbinden gateways twee of meer autonome netwerken, elk met zijn eigen routeringsalgoritmen, protocollen, topologie, domeinnaamdienst, en procedures en beleid voor netwerkbeheer.
+    **Gateways werken gewoonlijk op de Transport- en Session-lagen van het OSI-model.** Op de Transportlaag en daarboven zijn er talrijke protocollen en standaarden van verschillende verkopers; gateways worden gebruikt om daarmee om te gaan. Gateways zorgen voor de vertaling tussen netwerktechnologieën zoals Open System Interconnection (OSI) en Transmission Control Protocol/Internet Protocol (TCP/IP). Hierdoor verbinden gateways twee of meer autonome netwerken, elk met zijn eigen routeringsalgoritmen, protocollen, topologie, domeinnaamdienst, en procedures en beleid voor netwerkbeheer.
     Gateways vervullen alle functies van routers en meer. In feite is een router met toegevoegde vertaalfunctionaliteit een gateway. De functie die de vertaling tussen verschillende netwerktechnologieën doet, wordt een protocolconverter genoemd.
 
   
