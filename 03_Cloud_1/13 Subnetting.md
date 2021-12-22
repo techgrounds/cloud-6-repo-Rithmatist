@@ -3,6 +3,10 @@ Een Local Area Network (LAN) wordt vaak uitgedrukt als een reeks IP-adressen. El
 
 ## Key-terms
 
+- **LAN** = Lokaal netwerk
+- **NAT** = vertaling van netwerkadressen
+- **WAN** = Breed gebiedsnetwerk
+
 ## Opdracht
 - Maak een netwerkarchitectuur die voldoet aan de volgende eisen:
   - 1 private subnet dat alleen van binnen het LAN bereikbaar is. Dit subnet moet minimaal 15 hosts kunnen plaatsen.
