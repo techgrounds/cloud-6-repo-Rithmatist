@@ -4,7 +4,7 @@ AWS and Azure offer services that are similar to what network appliances do. Eve
 ## Key-terms
 
 - **DHCP** = Dynamisch Host Configuratie Protocol
-- **MAC** adres = Media Access Control adres
+- **MAC adres** = Media Access Control adres
 - **WPA2** = Wi-Fi Protected Access 2
 - **AES** = Geavanceerde Standaard Encryptie
 - **TKIP** = Protocol voor tijdelijke sleutelintegriteit
