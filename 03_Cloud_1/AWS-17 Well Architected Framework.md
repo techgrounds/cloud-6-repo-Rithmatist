@@ -7,6 +7,7 @@ AWS heeft het Well Architected Framework (WAF) om u te helpen bij het ontwerpen 
 - Het goed ontworpen kader
 ### Gebruikte bronnen
 - [Whitepapers related to WAF](https://aws.amazon.com/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc)
+- [AWS Well-Architected Framework](https://www.youtube.com/watch?v=x6DIk0_2Goo&t=71s)
 ### Ervaren problemen
 
 ### Resultaat
