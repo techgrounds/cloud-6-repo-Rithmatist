@@ -24,3 +24,6 @@ Een Local Area Network (LAN) wordt vaak uitgedrukt als een reeks IP-adressen. El
 
 ![netwerk](../00_includes/netwerk.png)
 
+/25 vertaald zich hoeveel "0" er zijn in de Subnet Mask en 126 hosts.
+Dit verdeel ik met twee private subnet en public subnet.
+Om in de private subnet internet te krijgen, plaats je een NAT gateway in de public subnet die een verbdinding heeft met een internet gateway.
