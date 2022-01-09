@@ -3,4 +3,4 @@
 Dit is mijn portfolio.
 
 
-linkedIn: [](https://www.linkedin.com/in/chris-de-bont-3029b7228/)
+linkedIn: (https://www.linkedin.com/in/chris-de-bont-3029b7228/)
