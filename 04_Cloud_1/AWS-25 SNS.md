@@ -3,8 +3,30 @@ Amazon SNS (Amazon Simple Notification Service) is een beheerde dienst die beric
 ## Key-terms
 
 ## Opdracht
+
+Deze oefening helpt u meer vertrouwd te raken met Amazon SNS door u te laten zien hoe u onderwerpen, abonnementen en berichten kunt beheren met behulp van de Amazon SNS-console.
+
 ### Gebruikte bronnen
+- [Getting started with Amazon SNS](https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html#step-create-queue)
 
 ### Ervaren problemen
 
 ### Resultaat
+
+#### Oefening 1: Maak een onderwerp aan
+
+![](../00_includes/topic.JPG)
+
+#### Oefening 2: Maak een abonnement aan op het onderwerp
+
+![](../00_includes/subscription.JPG)
+
+#### Oefening 3: Publiceer een bericht in het onderwerp
+
+![](../00_includes/message.png)
+
+#### Oefening 4: Verwijder het abonnement en het onderwerp
+
+![](../00_includes/subdel.JPG)
+
+![](../00_includes/topicdel.JPG)
