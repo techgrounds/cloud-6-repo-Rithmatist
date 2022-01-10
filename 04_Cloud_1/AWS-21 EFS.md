@@ -3,6 +3,8 @@ Amazon EFS is een set-and-forget, serverless, elastisch bestandssysteem dat het 
 Zonder de noodzaak om opslag toe te wijzen, kunnen Amazon EFS-bestandssystemen automatisch schalen van gigabytes tot petabytes aan gegevens. Een Amazon EFS bestand kan worden benaderd door tientallen, honderden of zelfs duizenden computerinstanties.
 ## Key-terms
 
+- **EFS = Elastic File System**
+
 ## Opdracht
 
 In deze Oefening leert u hoe u Amazon EFS kunt gebruiken om uw bestanden in de cloud op te slaan.
