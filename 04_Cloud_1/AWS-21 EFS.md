@@ -11,7 +11,7 @@ In deze Oefening leert u hoe u Amazon EFS kunt gebruiken om uw bestanden in de c
 - Leren koppelen van systemen, maken van een bestand, 
 - beëindigen van instances en vernietigen van bestandssystemen.
 
-###Oefening 1: Creëer een bestandssysteem
+### Oefening 1: Creëer een bestandssysteem
 
 - Open de EFS Console.
 - In de Amazon EFS console, open Create file system.
@@ -19,7 +19,7 @@ In deze Oefening leert u hoe u Amazon EFS kunt gebruiken om uw bestanden in de c
 - Accepteer alle standaardwaarden en klik op volgende stap.
 - Accepteer alle standaardwaarden en klik op bestandssysteem maken.
 
-###Oefening 2: Creëer en configureer een virtuele machine met Amazon EC2
+### Oefening 2: Creëer en configureer een virtuele machine met Amazon EC2
 
 - Open de Amazon EC2 console en klik op Launch Instance om uw virtuele machine aan te maken en te configureren.
 - Zoek Amazon Linux AMI op en klik op Selecteren.
@@ -31,7 +31,7 @@ In deze Oefening leert u hoe u Amazon EFS kunt gebruiken om uw bestanden in de c
 - Geef uw instantie netwerktoegang tot het bestandssysteem. Met uw instantie geselecteerd, selecteer Acties > Netwerken > Wijzig beveiligingsgroepen.
 - Schakel het selectievakje voor de standaard VPC beveiligingsgroep in en klik op Beveiligingsgroepen toewijzen.
 
-###Oefening 3: Maak verbinding met uw instance
+### Oefening 3: Maak verbinding met uw instance
 
 - Download Git voor Windows [hier](https://git-scm.com/download/win). Start het gedownloade installatieprogramma en accepteer de standaardinstellingen
 - Klik met de rechtermuisknop op je bureaublad (niet op een pictogram of bestand) en selecteer Git Bash Hier om een Git Bash opdrachtprompt te openen.
@@ -41,7 +41,7 @@ In deze Oefening leert u hoe u Amazon EFS kunt gebruiken om uw bestanden in de c
     The format is ssh -i {full path of your .pem file} ec2-user@{instance IP address}.
 
 
-###Oefening 4: Mount uw bestandssysteem
+### Oefening 4: Mount uw bestandssysteem
 
 - Open de Amazon EFS console en selecteer vervolgens het keuzerondje naast uw bestandssysteem om de details weer te geven.
 - Selecteer de Amazon EC2 mount instructies link.
@@ -61,7 +61,7 @@ In deze Oefening leert u hoe u Amazon EFS kunt gebruiken om uw bestanden in de c
 
     sudo dd if=/dev/zero of=~/efs/1GiB bs=1M count=1024 status=progress
 
-###Oefening 5: Termineer uw resources
+### Oefening 5: Termineer uw resources
 - Open de Amazon EC2 console, selecteer het vakje naast de instantie die u heeft aangemaakt. Klik vervolgens op de knop Actions, navigeer naar Instance State en klik op Terminate.
 - Open de Amazon EFS console, selecteer het keuzerondje naast het bestandssysteem dat u hebt gemaakt. Klik vervolgens op de knop Acties en klik op Bestandssysteem verwijderen.
 
