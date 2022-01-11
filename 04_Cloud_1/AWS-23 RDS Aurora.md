@@ -9,8 +9,10 @@ Aurora wordt geleverd met een opslag subsysteem met hoge capaciteit. De MySQL en
 - **RDS = Relational Database Service**
 
 ## Opdracht
+
 In de eerste lab zal ik een Amazon Aurora database cluster aanmaken, en het configureren van de parameters die nodig zijn voor de cluster componenten.
-In de tweede lab zal ik verbdinding maken met de DB cluster en initiële gegevensverzameling van S3 laden.
+
+In de tweede lab zal ik verbinding maken met de DB cluster en initiële gegevensverzameling van S3 laden.
 ### Gebruikte bronnen
 
 - [Create a New Aurora Cluster](https://awsauroralabsmy.com/provisioned/create/)
