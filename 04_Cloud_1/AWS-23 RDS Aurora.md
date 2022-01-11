@@ -16,6 +16,10 @@ In de tweede lab zal ik verbinding maken met de DB cluster en initiële gegevens
 ### Gebruikte bronnen
 
 - [Create a New Aurora Cluster](https://awsauroralabsmy.com/provisioned/create/)
+- [What is Amazon Aurora?](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html)
+- [What is Amazon Relational Database Service (Amazon RDS)?](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
+- [Introduction to Amazon Aurora - Relational Database Built for the Cloud - AWS](https://www.youtube.com/watch?v=FzxqIdIZ9wc)
+- [Amazon Aurora Global Database Deep Dive](https://youtu.be/1vFg1z-2E7Y)
 
 ### Ervaren problemen
 
