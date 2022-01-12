@@ -4,9 +4,36 @@ SQS (Amazon Simple Queue Service) is een volledig beheerde message queuing servi
 SQS biedt twee verschillende soorten wachtrijen voor berichten. Standaard wachtrijen bieden een hoge doorvoer, best-effort ordening, en levering ten minste eenmaal. SQS FIFO wachtrijen zijn bedoeld om ervoor te zorgen dat berichten slechts eenmaal verwerkt worden.
 ## Key-terms
 
+- **SQS** = Simple Queue Service
+
 ## Opdracht
+- Oefening 1: Maak een SQS bericht.
+- Oefening 2: Stuur een bericht.
+- Oefening 3: De bericht ontvangen.
+- Oefening 4: Lees de bericht.
+
 ### Gebruikte bronnen
+
+- [What is Amazon Simple Queue Service?](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html)
+- [AWS SQS | AWS Simple Queue Service](https://www.youtube.com/watch?v=vLNDaZuA3Dc)
 
 ### Ervaren problemen
 
 ### Resultaat
+
+
+### Oefening 1: Maak een SQS bericht.
+
+![sqsmade](../00_includes/sqsmade.JPG)
+
+### Oefening 2: Stuur een bericht.
+
+![sqssend](../00_includes/sqssend.JPG)
+
+### Oefening 3: De bericht ontvangen.
+
+![sqsreceived](../00_includes/sqsreceived.JPG)
+
+### Oefening 4: Lees de bericht.
+
+![sqsread](../00_includes/sqsread.JPG)
