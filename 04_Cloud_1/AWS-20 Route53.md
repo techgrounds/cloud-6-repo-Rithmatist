@@ -22,6 +22,7 @@ Bestudeer:
 - Route53
 ### Gebruikte bronnen
 - [What is Amazon Route 53?](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html)
+- [Amazon Route 53](https://www.youtube.com/watch?v=RGWgfhZByAI)
 ### Ervaren problemen
 
 ### Resultaat

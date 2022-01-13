@@ -4,8 +4,24 @@ Met AWS Lambda kunt u code uitvoeren zonder dat u servers hoeft te provisioneren
 ## Key-terms
 
 ## Opdracht
+
+- Oefening 1: Maak een Lambda blueprint functie.
+- Oefening 2: Test de code.
+
 ### Gebruikte bronnen
+
+- [AWS Lambda Tutorial](https://www.youtube.com/watch?v=seaBeltaKhw)
+- [AWS Lambda FAQs](https://aws.amazon.com/lambda/faqs/)
 
 ### Ervaren problemen
 
 ### Resultaat
+
+
+### Oefening 1: Maak een Lambda blueprint functie.
+
+![lambda](../00_includes/lambda.JPG)
+
+### Oefening 2: Test de code.
+
+![lambdatest](../00_includes/lambdatest.JPG)

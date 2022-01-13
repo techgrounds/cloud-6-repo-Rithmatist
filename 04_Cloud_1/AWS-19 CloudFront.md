@@ -13,6 +13,7 @@ Bestudeer:
 - CloudFront
 ### Gebruikte bronnen
 - [What is Amazon CloudFront?](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
+- [Introduction to Amazon CloudFront](https://www.youtube.com/watch?v=AT-nHW3_SVI)
 
 
 ### Ervaren problemen
