@@ -9,6 +9,7 @@ Bestudeer:
 
 ### Gebruikte bronnen
 - [What Is AWS CloudTrail?](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)
+- [What is AWS CloudTrail and What Does it Do?](https://www.youtube.com/watch?v=jncdEQNBi5s)
 ### Ervaren problemen
 
 ### Resultaat

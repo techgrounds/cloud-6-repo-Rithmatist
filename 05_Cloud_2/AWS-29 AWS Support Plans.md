@@ -6,6 +6,8 @@ AWS Support biedt één-op-één, snel reagerende technische ondersteuning door 
 
 ## Key-terms
 
+- **TAM** = Technical Account Manager
+
 ## Opdracht
 Bestudeer:
 
@@ -13,6 +15,7 @@ Bestudeer:
 
 ### Gebruikte bronnen
 - [AWS Support](https://aws.amazon.com/premiumsupport/)
+- [Billing and Pricing - AWS Support Plans](https://www.youtube.com/watch?v=A3522VCDy4A)
 
 ### Ervaren problemen
 

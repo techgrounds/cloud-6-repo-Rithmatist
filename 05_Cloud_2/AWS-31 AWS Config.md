@@ -11,6 +11,7 @@ Bestudeer:
 
 ### Gebruikte bronnen
 - [How AWS Config Works](https://docs.aws.amazon.com/config/latest/developerguide/how-does-config-work.html)
+- [AWS Config Introduction](https://www.youtube.com/watch?v=eiB2cwpV_H8)
 ### Ervaren problemen
 
 ### Resultaat

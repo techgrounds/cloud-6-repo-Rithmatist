@@ -10,6 +10,7 @@ Bestudeer:
 
 ### Gebruikte bronnen
 - [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
+- [Billing and Pricing - AWS Trusted Advisor](https://www.youtube.com/watch?v=YsQTkf6glUQ)
 ### Ervaren problemen
 
 ### Resultaat

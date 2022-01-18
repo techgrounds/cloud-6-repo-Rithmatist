@@ -12,6 +12,7 @@ Bestudeer:
 
 - ECS
 ### Gebruikte bronnen
+- [An Overview of AWS Elastic Container Service (ECS)](https://www.youtube.com/watch?v=I9VAMGEjW-Q)
 - [What is Amazon Elastic Container Service?](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
 
 ### Ervaren problemen
