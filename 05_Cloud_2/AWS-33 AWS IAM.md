@@ -3,8 +3,13 @@ Individuele en groepstoegang tot uw AWS resources kan veilig worden beheerd met 
 
 ## Key-terms
 
-- **IAM** = Identity and Access Management
-- **MFA** = Multi-factor authentication
+- **IAM** = Identiteit en toegangsbeheer
+- **MFA** = Multi-factor authenticatie
+- **IAM USERS** = Een IAM-gebruiker is een entiteit die een persoon of dienst vertegenwoordigt.
+- **Groups** = Groepen zijn verzamelingen van gebruikers en er zijn beleidsregels aan verbonden.
+- **Roles** = Rollen worden aangemaakt en vervolgens "aangenomen" door vertrouwde entiteiten en definiëren een set van permissies voor het doen van AWS service requests.
+- **Policies** = Beleidsregels zijn documenten die permissies definiëren en kunnen worden toegepast op gebruikers, groepen en rollen.
+- **STS** = De AWS Security Token Service (STS) is een webservice waarmee u tijdelijke inloggegevens met beperkte rechten kunt aanvragen voor IAM-gebruikers of voor gebruikers die u authenticeert (federatieve gebruikers).
 
 ## Opdracht
 
