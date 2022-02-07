@@ -7,4 +7,4 @@ hello Esther
 foo = 'hello'
 ls = ['Casper', 'Floris', 'Esther']
 for name in ls:
-	print(loo,name)
+	print(foo, name)

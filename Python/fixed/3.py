@@ -4,6 +4,6 @@ The output should be:
 '''
 foo = 20
 for i in range(10):
-	foo -= 1
+	foo += 1
 
 print(foo)
