@@ -34,3 +34,24 @@ Een for-lus kan worden gebruikt om door een lijst te lopen. In plaats van een ge
 ### Ervaren problemen
 
 ### Resultaat
+
+#### Oefening 1:
+
+```python
+lijst = ["Casper", "Coen", "Kim Sing", "Achraf", "Clyde"]
+
+for i in lijst:
+    print(i)
+```
+
+#### Oefening 2:
+
+```python
+lijst = [9, 80, 16, 67, 35]
+
+for i in range(len(lijst)):
+    if i == len(lijst)-1:
+        print(lijst[i] + lijst[0])
+    else:
+        print(lijst[i] + lijst[i+1])
+```

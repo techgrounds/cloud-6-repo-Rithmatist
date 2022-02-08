@@ -40,3 +40,26 @@ De for-lus itereert een opgegeven aantal keren. De range() functie kan gebruikt 
 ### Ervaren problemen
 
 ### Resultaat
+
+#### Oefening 1:
+
+```Python
+x = 0
+while x < 10:
+    x += 1
+    print(x)
+```
+
+#### Oefening 2:
+```Python
+x = 5
+for i in range(50):
+    print(x*i)
+```
+
+#### Oefening 3:
+```Python
+arr = ["Coen", "Casper", "Joshua", "Abdessamad", "Saskia"]
+for i in arr:
+    print(i)
+```

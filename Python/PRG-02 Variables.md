@@ -41,3 +41,30 @@ Vergeet niet dat je een print statement kan gebruiken om de huidige waarde van e
 ### Ervaren problemen
 
 ### Resultaat
+
+#### Oefening 1:
+
+
+```Python
+x = 10
+y = 20
+print(x,y)
+z = x + y
+print(z)
+```
+
+#### Oefening 2:
+
+```Python
+name = "Chris"
+print("Hello", name + "!")
+```
+
+#### Oefening 3:
+
+```Python
+var1 = 10
+print("Value 1:", var1)
+var1 = 20
+print("Value 2:", var1)
+```

@@ -43,3 +43,33 @@ Schrijf de aangepaste functie avg() zo dat het het gemiddelde van de gegeven par
 ### Ervaren problemen
 
 ### Resultaat
+
+#### Oefening 1:
+
+```Python
+import random
+
+for i in range(5):
+    rnd = random.randint(0, 100)
+    print(rnd)
+```
+
+#### Oefening 2:
+```Python
+name = "Chris"
+
+def myfunction(string):
+    print("Hello,", string + "!")
+
+myfunction(name)
+```
+#### Oefening 3:
+
+```Python
+def avg():
+    x = 128
+    y = 255
+    z = (x + y) / 2
+    print("The average of", x, "and", y, "is", z)
+avg()
+```

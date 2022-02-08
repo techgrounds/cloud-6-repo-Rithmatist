@@ -30,3 +30,52 @@ Haakjes worden gebruikt om dicts in Python te schrijven. Door de sleutel van de 
 ### Ervaren problemen
 
 ### Resultaat
+
+#### Oefening 1:
+
+```python
+Dict = {"First name": "Coen", "Last name": "Meulenkamp", "Job title": "Learning Coach", "Company": "TechGrounds"}
+
+for i in Dict.items():
+    print(i)
+```
+
+#### Oefening 2:
+
+```python
+import pandas as pd
+import os.path
+
+info = {}
+df = pd.DataFrame()
+
+
+def set_key(dictionary, key, value):
+    if key not in dictionary:
+        dictionary[key] = value
+    elif type(dictionary[key]) == list:
+        dictionary[key].append(value)
+    else:
+        dictionary[key] = [dictionary[key], value]
+
+
+while True:
+    q1 = input("First name?")
+    set_key(info, "First name", q1)
+    q2 = input("Last name?")
+    set_key(info, "Last name", q2)
+    q3 = input("Job title?")
+    set_key(info, "Job title", q3)
+    q4 = input("Company?")
+    set_key(info, "Company", q4)
+    break
+
+info = pd.DataFrame.from_dict(info, orient='index').transpose()
+df = pd.concat([df, info])
+
+if not os.path.isfile('oefening.csv'):
+    df.to_csv('oefening.csv', index=False)
+else:
+    df.to_csv('oefening.csv', mode='a', header=None, index=False)
+
+```
