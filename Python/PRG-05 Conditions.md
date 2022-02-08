@@ -30,3 +30,31 @@ Laat het spel herhalen totdat de gebruiker 100 invoert.
 ### Ervaren problemen
 
 ### Resultaat
+
+#### Oefening 1:
+
+```Python
+name = input("Please input your name:")
+
+if name == "Chris":
+    print("Hello! Welcome,", name + "!")
+else:
+    print("You are", name, "not Chris. Please leave.")
+```
+
+#### Oefening 2:
+
+```Python
+while True:
+    try:
+        number = int(input("Please input a number:"))
+        if number == 100:
+            print(number, "is a nice number indeed")
+            break
+        elif number < 100:
+            print(number, "is pretty low, isn't it")
+        else:
+            print("Wow,", number, "is a big number!")
+    except ValueError:
+        print("Integer only!")
+```

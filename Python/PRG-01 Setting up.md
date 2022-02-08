@@ -16,7 +16,7 @@ Je hebt een IDE nodig om te beginnen met het schrijven van code. Visual Studio C
 ### Oefening:
 - Installeer de laatste versie van Python van https://www.python.org/
 - Installeer VS Code van https://code.visualstudio.com/download
-- Schrijf de volgende Python code. 
+- Installeer de Python plug-in in VS Code.
 - De uitvoer in de terminal zou de tekst "Hello world!" moeten zijn.
 ### Gebruikte bronnen
 
@@ -27,3 +27,19 @@ Je hebt een IDE nodig om te beginnen met het schrijven van code. Visual Studio C
 ### Ervaren problemen
 
 ### Resultaat
+
+#### Installeer de laatste versie van Python van https://www.python.org/
+
+![pyinstalled](../00_includes/pyinstalled.JPG)
+
+#### Installeer VS Code van https://code.visualstudio.com/download
+
+![vscode](../00_includes/vscode.JPG)
+
+#### Installeer de Python plug-in in VS Code.
+
+![pythonvscode](../00_includes/pythonvscode.JPG)
+
+#### De uitvoer in de terminal zou de tekst "Hello world!" moeten zijn.
+
+![Helloworld](../00_includes/Helloworld.JPG)
