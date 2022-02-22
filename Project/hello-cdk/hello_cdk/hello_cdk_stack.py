@@ -9,7 +9,7 @@ from aws_cdk import (
     aws_backup as bk,
     aws_events as event,
     aws_s3_deployment as s3deploy,
-    custom_resources as cr,
+    aws_s3_assets as s3assets
 )
 from constructs import Construct
 
@@ -36,27 +36,6 @@ class CdkVpcStack(Stack):
             self, "S3Deployment",
             sources=[s3deploy.Source.asset("./hello_cdk/user_data")],
             destination_bucket=bucket,
-        )
-
-        bucket.add_to_resource_policy(
-            iam.PolicyStatement(
-                effect=iam.Effect.ALLOW,
-                actions=["s3:GetObject"],
-                resources=[bucket.arn_for_objects("*.html")],
-                principals=[iam.AnyPrincipal()]
-            )
-        )
-
-        bucket.add_to_resource_policy(
-            iam.PolicyStatement(
-                effect=iam.Effect.DENY,
-                actions=["s3:*"],
-                resources=[f"{bucket.bucket_arn}/*"],
-                principals=[iam.AnyPrincipal()],
-                conditions={
-                    "Bool": {"aws:SecureTransport": False}
-                }
-            )
         )
 
         vpc1 = ec2.Vpc(
@@ -137,6 +116,8 @@ class CdkVpcStack(Stack):
         key.grant_read_on_private_key(role)
         key.grant_read_on_public_key(role)
 
+        asset = s3assets.Asset(self, "Asset", path="./hello_cdk/user_data/user-data.sh")
+
         Webserver = ec2.Instance(
             self, "Webserver",
             instance_type=ec2.InstanceType("t2.micro"),
@@ -145,7 +126,6 @@ class CdkVpcStack(Stack):
             vpc=vpc1,
             role=role,
             availability_zone="eu-central-1a",
-            user_data=ec2.UserData.custom(user_data),
             block_devices=[ec2.BlockDevice(
                 device_name="/dev/xvda",
                 volume=ec2.BlockDeviceVolume.ebs(8,
@@ -154,6 +134,16 @@ class CdkVpcStack(Stack):
             )
             ]
         )
+
+        local_path = Webserver.user_data.add_s3_download_command(
+            bucket=asset.bucket,
+            bucket_key=asset.s3_object_key,
+            region="eu-central-1"
+        )
+
+        Webserver.user_data.add_execute_file_command(file_path=local_path, arguments="--verbose -y")
+
+        asset.grant_read(Webserver.role)
 
         ManagementServer = ec2.Instance(
             self, "ManagementServer",
@@ -208,4 +198,3 @@ class CdkVpcStack(Stack):
                 bk.BackupResource.from_ec2_instance(Webserver)
             ]
         )
-
