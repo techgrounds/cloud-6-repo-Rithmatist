@@ -1,5 +1,4 @@
 import aws_cdk as cdk
-import os.path
 from cdk_ec2_key_pair import KeyPair
 from aws_cdk import (
     Stack,
@@ -9,11 +8,8 @@ from aws_cdk import (
     aws_backup as bk,
     aws_events as event,
     aws_s3_deployment as s3deploy,
-    aws_s3_assets as s3assets
 )
 from constructs import Construct
-
-dirname = os.path.dirname(__file__)
 
 with open("./hello_cdk/user_data/user-data.sh") as f:
     user_data = f.read()
@@ -64,13 +60,27 @@ class CdkVpcStack(Stack):
         )
         #  CfnOutput(self, "Output", value=self.vpc.vpc_id)
 
-        self.cfn_vPCPeering_connection = ec2.CfnVPCPeeringConnection(
+        Peering_connection = ec2.CfnVPCPeeringConnection(
             self, "MyCfnVPCPeeringConnection",
             peer_vpc_id=vpc1.vpc_id,
             vpc_id=vpc2.vpc_id,
 
             # the properties below are optional
             peer_region="eu-central-1",
+        )
+
+        ec2.CfnRoute(
+            self, "MyCfnRoute",
+            route_table_id=vpc1.public_subnets[0].route_table.route_table_id,
+            destination_cidr_block=vpc2.vpc_cidr_block,
+            vpc_peering_connection_id=Peering_connection.ref
+        )
+
+        ec2.CfnRoute(
+            self, "MyCfnRoute2",
+            route_table_id=vpc2.public_subnets[1].route_table.route_table_id,
+            destination_cidr_block=vpc1.vpc_cidr_block,
+            vpc_peering_connection_id=Peering_connection.ref
         )
 
         amzn_linux = ec2.MachineImage.latest_amazon_linux(
@@ -93,8 +103,10 @@ class CdkVpcStack(Stack):
             allow_all_outbound=True
         )
 
-        Management_sg.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(22), "allow ssh access from the world")
-        Management_sg.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(3389), "allow RDP access from the world")
+        Management_sg.add_ingress_rule(ec2.Peer.ipv4("45.145.110.104/32"), ec2.Port.tcp(22),
+                                       "allow ssh access from the world")
+        Management_sg.add_ingress_rule(ec2.Peer.ipv4("45.145.110.104/32"), ec2.Port.tcp(3389),
+                                       "allow RDP access from the world")
 
         Webserver_sg = ec2.SecurityGroup(
             self, "Webserver SecurityGroup",
@@ -102,21 +114,26 @@ class CdkVpcStack(Stack):
             description="Allow http & https access to ec2 instances",
             allow_all_outbound=True
         )
-        Webserver_sg.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(80), "allow http access from the world")
-        Webserver_sg.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(443), "allow https access from the world")
 
         # Create a key pair with lambda function that will store the public and private key in secrets manager
 
-        key = KeyPair(
-            self, "KeyPair",
-            name="MyKeyPair",
-            description="MyKeyPair",
+        mmkey = KeyPair(
+            self, "ManagementKeyPair",
+            name="ManagementKeyPair",
+            description="SSH Key Pair for Management VPC",
             store_public_key=True)
 
-        key.grant_read_on_private_key(role)
-        key.grant_read_on_public_key(role)
+        mmkey.grant_read_on_private_key(role)
+        mmkey.grant_read_on_public_key(role)
 
-        asset = s3assets.Asset(self, "Asset", path="./hello_cdk/user_data/user-data.sh")
+        webkey = KeyPair(
+            self, "WebserverKeyPair",
+            name="WebserverKeyPair",
+            description="SSH Key Pair for Webserver VPC",
+            store_public_key=True)
+
+        webkey.grant_read_on_private_key(role)
+        webkey.grant_read_on_public_key(role)
 
         Webserver = ec2.Instance(
             self, "Webserver",
@@ -126,6 +143,8 @@ class CdkVpcStack(Stack):
             vpc=vpc1,
             role=role,
             availability_zone="eu-central-1a",
+            key_name=webkey.key_pair_name,
+            user_data=ec2.UserData.custom(user_data),
             block_devices=[ec2.BlockDevice(
                 device_name="/dev/xvda",
                 volume=ec2.BlockDeviceVolume.ebs(8,
@@ -135,16 +154,6 @@ class CdkVpcStack(Stack):
             ]
         )
 
-        local_path = Webserver.user_data.add_s3_download_command(
-            bucket=asset.bucket,
-            bucket_key=asset.s3_object_key,
-            region="eu-central-1"
-        )
-
-        Webserver.user_data.add_execute_file_command(file_path=local_path, arguments="--verbose -y")
-
-        asset.grant_read(Webserver.role)
-
         ManagementServer = ec2.Instance(
             self, "ManagementServer",
             instance_type=ec2.InstanceType("t2.micro"),
@@ -153,7 +162,7 @@ class CdkVpcStack(Stack):
             security_group=Management_sg,
             role=role,
             availability_zone="eu-central-1b",
-            key_name=key.key_pair_name,
+            key_name=mmkey.key_pair_name,
             block_devices=[ec2.BlockDevice(
                 device_name="/dev/sda1",
                 volume=ec2.BlockDeviceVolume.ebs(30,
@@ -163,19 +172,24 @@ class CdkVpcStack(Stack):
             ]
         )
 
-        backup_plan = bk.BackupPlan(
-            self, "UsStorageBackupPlanEBS",
-            backup_plan_name="us-storage-ebs-volume"
+        Webserver_sg.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(80), "allow http access from the world")
+        Webserver_sg.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(443), "allow https access from the world")
+        Webserver_sg.add_ingress_rule(ec2.Peer.security_group_id(Management_sg.security_group_id),
+                                      ec2.Port.tcp(22), "allow ssh access from the management Security Group")
+
+        web_backup_plan = bk.BackupPlan(
+            self, "WebServerStorageBackupPlanEBS",
+            backup_plan_name="WebServer-ebs-volume"
         )
 
-        backup_vault_name = "us-storage-ebs-volume"
+        backup_vault_name = "WebServer-ebs-volume"
         bk_vault = bk.BackupVault(
-            self, "us-storage-ebs-volume",
+            self, "WebServer-ebs-volume",
             backup_vault_name=backup_vault_name,
             removal_policy=cdk.RemovalPolicy.DESTROY
         )
 
-        backup_plan.add_rule(
+        web_backup_plan.add_rule(
             rule=bk.BackupPlanRule(
                 backup_vault=bk_vault,
                 rule_name='backup-ebs-volume-daily',
@@ -190,11 +204,10 @@ class CdkVpcStack(Stack):
             )
         )
 
-        backup_plan.add_selection(
-            "us-storage-ebs-volume",
+        web_backup_plan.add_selection(
+            "WebServer-ebs-volume",
             backup_selection_name="BackupSelection",
             resources=[
-                bk.BackupResource.from_ec2_instance(ManagementServer),
                 bk.BackupResource.from_ec2_instance(Webserver)
             ]
         )

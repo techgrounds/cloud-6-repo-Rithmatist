@@ -15,22 +15,24 @@
 
 ### Uitwerking
 1. **Doel**  
-   | Item | Opmerking |
-   | ---- | --------- |
-   | Visie | *Wat is het uiteindelijke product* |
-   | Doelen | *Overzicht van doelen, timelines en succes metrics* |
-   | Initiatieven| *Overzicht High-level product initiatieven* |
-   | Persona(s) | *Voor wie is het product* |
+   | Item       | Opmerking                                                                                          |
+   | ---------- | -------------------------------------------------------------------------------------------------- |
+   | Visie      | MPV v1.0 t.b.v transitie naar de Cloud                                                             |
+   | Doelen     | Conform de gegeven Epics, Diagram en stesel van eisen en aannames een werkende MVP v1.0 opleveren. |
+   |            | d.d. 25-02-2022 voortgangsrapportage MVP v1.0                                                      |
+   |            | d.d. 11-03-2022 oplevering MVP v1.0                                                                |
+   | Persona(s) | Product Owner, DevOps Team                                                                         |
 
 2. **Releases**  
-   | Item | Opmerking |
-   | ---- | --------- |
-   | Release | MVP v1.0 |
-   | Datum | *release datum* |
-   | Initiatief | *waar is de release voor bestemd* |
-   | Mijlpalen | *release mijlpalen* |
-   | Kenmerken | *kenmerken van de release* |
-   | Afhankelijkheden | *release afhankelijkheden* |
+   | Item             | Opmerking                                                                  |
+   | ---------------- | -------------------------------------------------------------------------- |
+   | Release          | MVP v1.0                                                                   |
+   | Datum            | 11-03-2022                                                                 |
+   | Initiatief       | Transitie van de infrastructuur naar de cloud                              |
+   | Mijlpalen        | 25-02-2022 Tussentijdse voortgangsrapportage MVP v1.0                      |
+   |                  | 11-03-2022 Oplevering/rapportage MVP v1.0                                  |
+   | Kenmerken        | Omgeving voor de Admin server en een gescheiden omgeving voor de Webserver |
+   | Afhankelijkheden | IaC, Python, AWs CDK, eisen Product Owner                                  |
   
 3. **Epics**  
    Alle Epics zijn beschreven in afzonderlijke documenten. Daar wordt per Epic alles besproken en uitgewerkt.  
@@ -51,4 +53,4 @@
   
 4. **Diagrammen**  
 Na het overleg met de Product Owner (op 10 februari 2022), adviseren wij onderstaand diagram voor het MVP.  
-![awsdiagram](../00_includes/Cloud6Sentia1_diagram_0_4.drawio.png)
+![awsdiagram](../00_includes/Cloud6Sentia1_diagram_0_5.drawio.png)
