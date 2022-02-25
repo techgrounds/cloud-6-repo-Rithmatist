@@ -29,6 +29,4 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 - Webserver alleen te bereiken vanaf Admin/Management Server via SSH/RDP
 - IP ranges: 10.10.10.0/24 en 10.20.20.0/24
 - Subnets: firewalls op subnet niveau (Network ACL)
-- S3 bucket via de Admin/managment server
 - Lege Availablity Zone is voor de failover
-- Scrum master meeting dagelijks om 15:30 uur
