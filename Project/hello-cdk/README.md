@@ -1,58 +1,62 @@
 
-# Welcome to your CDK Python project!
+# Welkom bij mijn CDK Python project!
 
-This is a blank project for Python development with CDK.
+Dit is een leeg project voor Python ontwikkeling met CDK.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+Het `cdk.json` bestand vertelt de CDK Toolkit hoe uw app uitgevoerd moet worden.
 
-This project is set up like a standard Python project.  The initialization
-process also creates a virtualenv within this project, stored under the `.venv`
-directory.  To create the virtualenv it assumes that there is a `python3`
-(or `python` for Windows) executable in your path with access to the `venv`
-package. If for any reason the automatic creation of the virtualenv fails,
-you can create the virtualenv manually.
+Dit project is opgezet als een standaard Python project.  Het initialisatie
+proces maakt ook een virtualenv aan binnen dit project, opgeslagen onder de `.venv`
+map.  Om de virtualenv aan te maken wordt er verondersteld dat er een `python3`
+(of `python` voor Windows) op je pad staat met toegang tot het `venv`
+pakket. Als om wat voor reden dan ook de automatische creatie van de virtualenv mislukt,
+kunt u de virtualenv handmatig aanmaken.
 
-To manually create a virtualenv on MacOS and Linux:
+De parameters handleiding bevind zich [**hier**](/Project/hello-cdk/parameters.md).
+
+Om handmatig een virtualenv aan te maken op MacOS en Linux:
 
 ```
 $ python -m venv .venv
 ```
 
-After the init process completes and the virtualenv is created, you can use the following
-step to activate your virtualenv.
+Nadat het init proces is voltooid en de virtualenv is aangemaakt, kunt u de volgende
+stap gebruiken om uw virtualenv te activeren.
 
 ```
 $ source .venv/bin/activate
 ```
 
-If you are a Windows platform, you would activate the virtualenv like this:
+Als u een Windows platform bent, zou u de virtualenv als volgt activeren:
 
 ```
 % .venv\Scripts\activate.bat
 ```
 
-Once the virtualenv is activated, you can install the required dependencies.
+Zodra de virtualenv is geactiveerd, kunt u de benodigde dependencies installeren.
 
 ```
 $ pip install -r requirements.txt
 ```
 
-At this point you can now synthesize the CloudFormation template for this code.
+Op dit punt kunt u nu de CloudFormation template voor deze code synthetiseren.
 
 ```
 $ cdk synth
 ```
 
-To add additional dependencies, for example other CDK libraries, just add
-them to your `setup.py` file and rerun the `pip install -r requirements.txt`
-command.
+Om extra afhankelijkheden toe te voegen, bijvoorbeeld andere CDK bibliotheken, voegt u
+ze toe aan uw `setup.py` bestand en voer het `pip install -r requirements.txt`
+commando.
 
-## Useful commands
+Parameters overzicht vind u hier.
 
- * `cdk ls`          list all stacks in the app
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk docs`        open CDK documentation
+## Nuttige commando's
 
-Enjoy!
+ * `cdk ls` lijst alle stacks in de app
+ * `cdk synth` zendt de gesynthetiseerde CloudFormation template uit
+ * `cdk deploy` deploy deze stack naar uw standaard AWS account/regio
+ * `cdk diff` vergelijk de uitgezette stack met de huidige status
+ * `cdk docs` open CDK documentatie
+
+Veel plezier!
