@@ -107,6 +107,9 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Doen we niet        | n.v.t                                                              |
 | Acceptatie criteria | Als alles werkt.                                                                                    |
 
+###  veilig netwerk 
+Management-server is alleen toegankelijk via trusted sources.
+
 [naar boven](https://github.com/techgrounds/cloud-6-repo-Rithmatist/blob/main/Project/Epic%20Document.md#inhoud)
 ## Klant wil een werkende webserver deployen (Epic - 05)
 | Item                | Opmerking                                                                                 |
@@ -119,6 +122,9 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Aannames            | geen aannames                                                                             |
 | Doen we niet        | Een complete website bouwen.                              |
 | Acceptatie criteria | Als de website toegankelijk is van buitenaf.                                                    |
+
+###  webserver 
+Webserver is bereikbaar met een public ip address.
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-Rithmatist/blob/main/Project/Epic%20Document.md#inhoud)
 ## Klant wil een werkende management server deployen (epic - 06)
@@ -133,6 +139,9 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Doen we niet        | n.v.t                                                   |
 | Acceptatie criteria | Als toegang naar de Management server restricted is.                            |
 
+### management-server
+Management-server is alleen toegankelijk voor de benodigde gebruikers.
+
 [naar boven](https://github.com/techgrounds/cloud-6-repo-Rithmatist/blob/main/Project/Epic%20Document.md#inhoud)
 ## Klant wil opslagoplossing voor bootstrapscript(s) (epic - 07)
 | Item                | Opmerking                                                                                                                               |
@@ -145,6 +154,9 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Aannames            | S3 bucket wordt gebruikt met versioning en encryptie                                                                                    |
 | Doen we niet        | n.v.t                                                                            |
 | Acceptatie criteria | Als de bootstrap scripts in de s3 Bucket niet toegankelijk is voor public                                                                           |
+
+### Bootstrap-script-opslag
+Bootstrap scripts worden opgeslagen in een s3 bucket met kms managed encryptie.
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-Rithmatist/blob/main/Project/Epic%20Document.md#inhoud)
 ## Klant wil alle data versleuteld hebben (epic - 08)
