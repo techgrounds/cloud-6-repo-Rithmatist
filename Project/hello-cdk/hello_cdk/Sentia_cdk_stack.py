@@ -71,6 +71,8 @@ class CdkVpcStack(Stack):
     def __init__(self, scope: Construct, id: str, env) -> None:
         super().__init__(scope, id, env=env)
 
+        # Parameters variables.
+
         environments = self.node.try_get_context("ENVIRONMENTS")
         Bucket_environment = environments.get("bucket")
         bucket_name = Bucket_environment.get("bucket_name")
@@ -81,14 +83,14 @@ class CdkVpcStack(Stack):
         s3Deployment_name = s3deploy_environment.get("name")
         sources = s3deploy_environment.get("sources")
 
-        vpc_environment = environments.get("vpc")
+        vpc_environment = environments.get("webserver_vpc")
         vpc_name = vpc_environment.get("name")
         max_azs = vpc_environment.get("max_az")
         cidr = vpc_environment.get("cidr")
         subnet_name = vpc_environment.get("subnet_name")
         cidr_mask = vpc_environment.get("cidr_mask")
 
-        second_vpc_environment = environments.get("second_vpc")
+        second_vpc_environment = environments.get("managementserver_vpc")
         second_vpc_name = second_vpc_environment.get("name")
         second_max_azs = second_vpc_environment.get("max_az")
         second_cidr = second_vpc_environment.get("cidr")
@@ -192,6 +194,8 @@ class CdkVpcStack(Stack):
         man_bk_year = man_bk_environment.get("cron_year")
         man_bk_select = man_bk_environment.get("backup_selection_name")
 
+        # S3 Bucket creation.
+
         bucket = s3.Bucket(
             self,
             bucket_name,
@@ -201,11 +205,15 @@ class CdkVpcStack(Stack):
             auto_delete_objects=auto_delete_objects
         )
 
+        # S3 Bucket file deployment.
+
         s3deploy.BucketDeployment(
             self, s3Deployment_name,
             sources=[s3deploy.Source.asset(sources)],
             destination_bucket=bucket
         )
+
+        # vpc creation for webserver, includes 2 public subnets and 2 az.
 
         vpc1 = ec2.Vpc(
             self, second_vpc_name,
@@ -219,6 +227,8 @@ class CdkVpcStack(Stack):
             ]
         )
 
+        # vpc creation for management server, includes 2 public subnets and 2 az.
+
         vpc2 = ec2.Vpc(
             self, vpc_name,
             max_azs=max_azs,
@@ -231,7 +241,8 @@ class CdkVpcStack(Stack):
             )
             ]
         )
-        #  CfnOutput(self, "Output", value=self.vpc.vpc_id)
+
+        # Deployment of vpc-peering.
 
         Peering_connection = ec2.CfnVPCPeeringConnection(
             self, peering_name,
@@ -256,6 +267,8 @@ class CdkVpcStack(Stack):
             vpc_peering_connection_id=Peering_connection.ref
         )
 
+        # Linux AMI creation.
+
         amzn_linux = ec2.MachineImage.latest_amazon_linux(
             generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2,
             edition=ec2.AmazonLinuxEdition.STANDARD,
@@ -263,11 +276,17 @@ class CdkVpcStack(Stack):
             storage=ec2.AmazonLinuxStorage.GENERAL_PURPOSE,
         )
 
+        # Windows AMI creation.
+
         windows = ec2.MachineImage.latest_windows(ec2.WindowsVersion.WINDOWS_SERVER_2019_ENGLISH_FULL_BASE)
+
+        # Role creation.
 
         role = iam.Role(self, role_name, assumed_by=iam.ServicePrincipal(role_service_principal))
 
         role.add_managed_policy(iam.ManagedPolicy.from_aws_managed_policy_name(role_managed_policy_name))
+
+        # Security group creation for management server.
 
         Management_sg = ec2.SecurityGroup(
             self, mm_sg_name,
@@ -278,6 +297,8 @@ class CdkVpcStack(Stack):
 
         Management_sg.add_ingress_rule(ec2.Peer.ipv4(mm_sg_ssh_ipv4), ec2.Port.tcp(mm_sg_ssh_port), mm_sg_ing_ssh_desc)
         Management_sg.add_ingress_rule(ec2.Peer.ipv4(mm_sg_rdp_ipv4), ec2.Port.tcp(mm_sg_rdp_port), mm_sg_rdp_ssh_desc)
+
+        # Security group creation for webserver.
 
         Webserver_sg = ec2.SecurityGroup(
             self, wb_sg_name,
@@ -295,6 +316,8 @@ class CdkVpcStack(Stack):
 
         # Create a key pair with lambda function that will store the public and private key in secrets manager
 
+        # Create a key pair for the management server.
+
         mmkey = KeyPair(
             self, mm_key_name,
             name=mm_key_name,
@@ -304,6 +327,8 @@ class CdkVpcStack(Stack):
         mmkey.grant_read_on_private_key(role)
         mmkey.grant_read_on_public_key(role)
 
+        # Create a key pair for the webserver.
+
         webkey = KeyPair(
             self, web_key_name,
             name=web_key_name,
@@ -312,6 +337,8 @@ class CdkVpcStack(Stack):
 
         webkey.grant_read_on_private_key(role)
         webkey.grant_read_on_public_key(role)
+
+        # ec2 instance creation for the webserver.
 
         Webserver = ec2.Instance(
             self, webinstance_name,
@@ -330,6 +357,9 @@ class CdkVpcStack(Stack):
             )
             ]
         )
+
+        # Add userdata to the webserver.
+
         assets = Asset(self, webinstance_asset,
                        path=webinstance_path
                        )
@@ -345,6 +375,8 @@ class CdkVpcStack(Stack):
         )
 
         assets.grant_read(Webserver.role)
+
+        # ec2 instance creation for the management server.
 
         ManagementServer = ec2.Instance(
             self, mminstance_name,
@@ -362,6 +394,8 @@ class CdkVpcStack(Stack):
             )
             ]
         )
+
+        # Webserver backup creation.
 
         web_backup_plan = bk.BackupPlan(
             self, web_bk_backup,
@@ -397,7 +431,7 @@ class CdkVpcStack(Stack):
             ]
         )
 
-        ######################
+        # Management server backup creation.
 
         man_backup_plan = bk.BackupPlan(
             self, man_bk_backup,

@@ -37,15 +37,15 @@
             "name": "S3Deployment",
             "sources": "./hello_cdk/userdata"
           },
-          "vpc": {
-            "name": "VPC1",
+          "webserver_vpc": {
+            "name": "webserver_vpc",
             "max_az": 2,
             "cidr": "10.10.10.0/24",
             "subnet_name": "Public1",
             "cidr_mask": 25
           },
-          "second_vpc": {
-            "name": "VPC2",
+          "managementserver_vpc": {
+            "name": "managementserver_vpc",
             "max_az": 2,
             "cidr": "10.20.20.0/24",
             "subnet_name": "Public2",
