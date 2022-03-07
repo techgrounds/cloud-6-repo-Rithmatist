@@ -35,7 +35,7 @@
    | Afhankelijkheden | IaC, Python, AWs CDK, eisen Product Owner                                  |
   
 3. **Epics**  
-   [Epic document.](../07_Project/Epic%20Document.md).
+   [Epic document.](../Project/Epic%20Document.md).
   
 4. **Diagrammen**  
 ![awsdiagram](../00_includes/Cloud6Sentia1_diagram_0_5.drawio.png)  
