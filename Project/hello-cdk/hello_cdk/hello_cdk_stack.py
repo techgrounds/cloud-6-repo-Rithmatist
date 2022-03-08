@@ -66,7 +66,7 @@ from constructs import Construct
 # ---
 
 
-class CdkVpcStack(Stack):
+class HelloCdkStack(Stack):
 
     def __init__(self, scope: Construct, id: str, env) -> None:
         super().__init__(scope, id, env=env)

@@ -4,13 +4,9 @@ import os
 
 import aws_cdk as cdk
 
-from hello_cdk.Sentia_cdk_stack import CdkVpcStack
-from hello_cdk.Peering import PeeringStack
-from hello_cdk.iamusers import iamusers
+from hello_cdk.hello_cdk_stack import HelloCdkStack
+
 
 app = cdk.App()
-CdkVpcStack(app, "SentiaCdkStack", env=cdk.Environment(account='600563666729', region='eu-central-1'))
-# PeeringStack(app, "PeeringStack",env=cdk.Environment(account='600563666729', region='eu-central-1'))
-# iamusers(app, "iamusers",env=cdk.Environment(account='600563666729', region='eu-central-1'))
-
+HelloCdkStack(app, "HelloCdkStack", env=cdk.Environment(account='600563666729', region='eu-central-1'))
 app.synth()
