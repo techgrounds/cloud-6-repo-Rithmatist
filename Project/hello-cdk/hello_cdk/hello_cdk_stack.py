@@ -87,19 +87,21 @@ class HelloCdkStack(Stack):
         s3Deployment_name = s3deploy_environment.get("name")
         sources = s3deploy_environment.get("sources")
 
-        vpc_environment = environments.get("webserver_vpc")
+        vpc_environment = environments.get("managementserver_vpc")
         vpc_name = vpc_environment.get("name")
         max_azs = vpc_environment.get("max_az")
         cidr = vpc_environment.get("cidr")
         subnet_name = vpc_environment.get("subnet_name")
         cidr_mask = vpc_environment.get("cidr_mask")
 
-        second_vpc_environment = environments.get("managementserver_vpc")
+        second_vpc_environment = environments.get("webserver_vpc")
         second_vpc_name = second_vpc_environment.get("name")
         second_max_azs = second_vpc_environment.get("max_az")
         second_cidr = second_vpc_environment.get("cidr")
         second_subnet_name = second_vpc_environment.get("subnet_name")
         second_cidr_mask = second_vpc_environment.get("cidr_mask")
+        private_subnet_name = second_vpc_environment.get("private_subnet_name")
+        private_cidr_mask = second_vpc_environment.get("cidr_mask_private")
 
         peering_environment = environments.get("peering")
         peering_name = peering_environment.get("name")
@@ -164,39 +166,39 @@ class HelloCdkStack(Stack):
         webinstance_path = webinstance_enviroment.get("asset_path")
         webinstance_region = webinstance_enviroment.get("asset_region")
 
-        # mminstance_enviroment = environments.get("managementserver_instance")
-        # mminstance_name = mminstance_enviroment.get("name")
-        # mminstance_type = mminstance_enviroment.get("instance_type")
-        # mminstance_avz = mminstance_enviroment.get("availability_zone")
-        # mminstance_root = mminstance_enviroment.get("root_device_directory")
-        # mminstance_size = mminstance_enviroment.get("volume_size")
-        # mminstance_encrypt = mminstance_enviroment.get("encrypted_volume")
-        #
-        # web_bk_environment = environments.get("webserver_backup")
-        # web_bk_backup = web_bk_environment.get("name")
-        # web_bk_name = web_bk_environment.get("backup_plan_name")
-        # web_bk_vault = web_bk_environment.get("backup_vault_name")
-        # web_bk_rule = web_bk_environment.get("backup_rule_name")
-        # web_bk_del = web_bk_environment.get("delete_backup_after_days")
-        # web_bk_min = web_bk_environment.get("cron_minute")
-        # web_bk_hour = web_bk_environment.get("cron_hour")
-        # web_bk_month = web_bk_environment.get("cron_month")
-        # web_bk_week = web_bk_environment.get("cron_week_day")
-        # web_bk_year = web_bk_environment.get("cron_year")
-        # web_bk_select = web_bk_environment.get("backup_selection_name")
-        #
-        # man_bk_environment = environments.get("managementserver_backup")
-        # man_bk_backup = man_bk_environment.get("name")
-        # man_bk_name = man_bk_environment.get("backup_plan_name")
-        # man_bk_vault = man_bk_environment.get("backup_vault_name")
-        # man_bk_rule = man_bk_environment.get("backup_rule_name")
-        # man_bk_del = man_bk_environment.get("delete_backup_after_days")
-        # man_bk_min = man_bk_environment.get("cron_minute")
-        # man_bk_hour = man_bk_environment.get("cron_hour")
-        # man_bk_month = man_bk_environment.get("cron_month")
-        # man_bk_week = man_bk_environment.get("cron_week_day")
-        # man_bk_year = man_bk_environment.get("cron_year")
-        # man_bk_select = man_bk_environment.get("backup_selection_name")
+        mminstance_enviroment = environments.get("managementserver_instance")
+        mminstance_name = mminstance_enviroment.get("name")
+        mminstance_type = mminstance_enviroment.get("instance_type")
+        mminstance_avz = mminstance_enviroment.get("availability_zone")
+        mminstance_root = mminstance_enviroment.get("root_device_directory")
+        mminstance_size = mminstance_enviroment.get("volume_size")
+        mminstance_encrypt = mminstance_enviroment.get("encrypted_volume")
+
+        web_bk_environment = environments.get("webserver_backup")
+        web_bk_backup = web_bk_environment.get("name")
+        web_bk_name = web_bk_environment.get("backup_plan_name")
+        web_bk_vault = web_bk_environment.get("backup_vault_name")
+        web_bk_rule = web_bk_environment.get("backup_rule_name")
+        web_bk_del = web_bk_environment.get("delete_backup_after_days")
+        web_bk_min = web_bk_environment.get("cron_minute")
+        web_bk_hour = web_bk_environment.get("cron_hour")
+        web_bk_month = web_bk_environment.get("cron_month")
+        web_bk_week = web_bk_environment.get("cron_week_day")
+        web_bk_year = web_bk_environment.get("cron_year")
+        web_bk_select = web_bk_environment.get("backup_selection_name")
+
+        man_bk_environment = environments.get("managementserver_backup")
+        man_bk_backup = man_bk_environment.get("name")
+        man_bk_name = man_bk_environment.get("backup_plan_name")
+        man_bk_vault = man_bk_environment.get("backup_vault_name")
+        man_bk_rule = man_bk_environment.get("backup_rule_name")
+        man_bk_del = man_bk_environment.get("delete_backup_after_days")
+        man_bk_min = man_bk_environment.get("cron_minute")
+        man_bk_hour = man_bk_environment.get("cron_hour")
+        man_bk_month = man_bk_environment.get("cron_month")
+        man_bk_week = man_bk_environment.get("cron_week_day")
+        man_bk_year = man_bk_environment.get("cron_year")
+        man_bk_select = man_bk_environment.get("backup_selection_name")
 
         # S3 Bucket creation.
 
@@ -224,52 +226,60 @@ class HelloCdkStack(Stack):
             max_azs=second_max_azs,
             cidr=second_cidr,
             subnet_configuration=[ec2.SubnetConfiguration(
-                subnet_type=ec2.SubnetType.PUBLIC,
-                name=second_subnet_name,
-                cidr_mask=second_cidr_mask
-            )
-            ]
+                 subnet_type=ec2.SubnetType.PUBLIC,
+                 name=second_subnet_name,
+                 cidr_mask=second_cidr_mask
+             ),
+             ec2.SubnetConfiguration(
+                 subnet_type=ec2.SubnetType.PRIVATE_WITH_NAT,
+                 name=private_subnet_name,
+                 cidr_mask=private_cidr_mask
+             )
+             ]
         )
 
         # vpc creation for management server, includes 2 public subnets and 2 az.
 
-        # vpc2 = ec2.Vpc(
-        #     self, vpc_name,
-        #     max_azs=max_azs,
-        #     cidr=cidr,
-        #     # configuration will create 2 groups in 2 AZs = 4 subnets.
-        #     subnet_configuration=[ec2.SubnetConfiguration(
-        #         subnet_type=ec2.SubnetType.PUBLIC,
-        #         name=subnet_name,
-        #         cidr_mask=cidr_mask
-        #     )
-        #     ]
-        # )
+        vpc2 = ec2.Vpc(
+            self, vpc_name,
+            max_azs=max_azs,
+            cidr=cidr,
+            # configuration will create 2 groups in 2 AZs = 4 subnets.
+            subnet_configuration=[ec2.SubnetConfiguration(
+                subnet_type=ec2.SubnetType.PUBLIC,
+                name=subnet_name,
+                cidr_mask=cidr_mask
+            )
+            ]
+        )
         #
         # # Deployment of vpc-peering.
         #
-        # Peering_connection = ec2.CfnVPCPeeringConnection(
-        #     self, peering_name,
-        #     peer_vpc_id=vpc1.vpc_id,
-        #     vpc_id=vpc2.vpc_id,
+        Peering_connection = ec2.CfnVPCPeeringConnection(
+            self, peering_name,
+            peer_vpc_id=vpc1.vpc_id,
+            vpc_id=vpc2.vpc_id,
+
+            # the properties below are optional
+            peer_region=peer_region,
+        )
         #
-        #     # the properties below are optional
-        #     peer_region=peer_region,
-        # )
-        #
-        # ec2.CfnRoute(
-        #     self, route_name,
-        #     route_table_id=vpc1.public_subnets[0].route_table.route_table_id,
-        #     destination_cidr_block=vpc2.vpc_cidr_block,
-        #     vpc_peering_connection_id=Peering_connection.ref
-        # )
-        #
-        # ec2.CfnRoute(
-        #     self, second_route_name,
-        #     route_table_id=vpc2.public_subnets[1].route_table.route_table_id,
-        #     destination_cidr_block=vpc1.vpc_cidr_block,
-        #     vpc_peering_connection_id=Peering_connection.ref
-        # )
+
+        for i in range(0,1):
+            ec2.CfnRoute(
+                self, route_name,
+                route_table_id=vpc1.public_subnets[i].route_table.route_table_id,
+                destination_cidr_block=vpc2.vpc_cidr_block,
+                vpc_peering_connection_id=Peering_connection.ref
+            )
+
+        for i in range(0,1):
+            ec2.CfnRoute(
+                self, second_route_name,
+                route_table_id=vpc2.public_subnets[i].route_table.route_table_id,
+                destination_cidr_block=vpc1.vpc_cidr_block,
+                vpc_peering_connection_id=Peering_connection.ref
+            )
 
         # Linux AMI creation.
 
@@ -282,25 +292,25 @@ class HelloCdkStack(Stack):
 
         # Windows AMI creation.
 
-        # windows = ec2.MachineImage.latest_windows(ec2.WindowsVersion.WINDOWS_SERVER_2019_ENGLISH_FULL_BASE)
+        windows = ec2.MachineImage.latest_windows(ec2.WindowsVersion.WINDOWS_SERVER_2019_ENGLISH_FULL_BASE)
 
         # Role creation.
 
-        role = iam.Role(self, role_name, assumed_by=iam.ServicePrincipal(role_service_principal))
+        # role = iam.Role(self, role_name, assumed_by=iam.ServicePrincipal(role_service_principal))
 
-        role.add_managed_policy(iam.ManagedPolicy.from_aws_managed_policy_name(role_managed_policy_name))
+        # role.add_managed_policy(iam.ManagedPolicy.from_aws_managed_policy_name(role_managed_policy_name))
 
         # Security group creation for management server.
 
-        # Management_sg = ec2.SecurityGroup(
-        #     self, mm_sg_name,
-        #     vpc=vpc2,
-        #     description=mm_sg_description,
-        #     allow_all_outbound=mm_sg_ob
-        # )
-        #
-        # Management_sg.add_ingress_rule(ec2.Peer.ipv4(mm_sg_ssh_ipv4), ec2.Port.tcp(mm_sg_ssh_port), mm_sg_ing_ssh_desc)
-        # Management_sg.add_ingress_rule(ec2.Peer.ipv4(mm_sg_rdp_ipv4), ec2.Port.tcp(mm_sg_rdp_port), mm_sg_rdp_ssh_desc)
+        Management_sg = ec2.SecurityGroup(
+            self, mm_sg_name,
+            vpc=vpc2,
+            description=mm_sg_description,
+            allow_all_outbound=mm_sg_ob
+        )
+
+        Management_sg.add_ingress_rule(ec2.Peer.ipv4(mm_sg_ssh_ipv4), ec2.Port.tcp(mm_sg_ssh_port), mm_sg_ing_ssh_desc)
+        Management_sg.add_ingress_rule(ec2.Peer.ipv4(mm_sg_rdp_ipv4), ec2.Port.tcp(mm_sg_rdp_port), mm_sg_rdp_ssh_desc)
 
         # Security group creation for webserver.
 
@@ -310,32 +320,30 @@ class HelloCdkStack(Stack):
             description=wb_sg_description,
             allow_all_outbound=wb_sg_ob
         )
-
-        Webserver_sg.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(80),
-                                      "Allow HTTP traffic to ELB")
         #
-        Webserver_sg.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(443),
-                                      "Allow HTTPS traffic to ELB")
+        # Webserver_sg.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(80),
+        #                               "Allow HTTP traffic to ELB")
+        # #
+        # Webserver_sg.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(443),
+        #                               "Allow HTTPS traffic to ELB")
 
         # Webserver_sg.add_egress_rule(ec2.Peer.security_group_id(elb_sg.security_group_id), ec2.Port.tcp(80), "Allow  HTTP outbound traffic to ELB")
         #
         # Webserver_sg.add_egress_rule(ec2.Peer.security_group_id(elb_sg.security_group_id), ec2.Port.tcp(443),"Allow HTTPS outbound traffic to ELB")
 
-        # Webserver_sg.add_ingress_rule(ec2.Peer.security_group_id(Management_sg.security_group_id),
-        #                               ec2.Port.tcp(wb_sg_ssh_port), wb_sg_ssh_desc)
+        Webserver_sg.add_ingress_rule(ec2.Peer.security_group_id(Management_sg.security_group_id),
+                                      ec2.Port.tcp(wb_sg_ssh_port), wb_sg_ssh_desc)
 
         # Create a key pair with lambda function that will store the public and private key in secrets manager
 
         # Create a key pair for the management server.
 
-        # mmkey = KeyPair(
-        #     self, mm_key_name,
-        #     name=mm_key_name,
-        #     description=mm_key_desc,
-        #     store_public_key=mm_key_store)
+        mmkey = KeyPair(
+            self, mm_key_name,
+            name=mm_key_name,
+            description=mm_key_desc,
+            store_public_key=mm_key_store)
         #
-        # mmkey.grant_read_on_private_key(role)
-        # mmkey.grant_read_on_public_key(role)
 
         # Create a key pair for the webserver.
 
@@ -344,9 +352,6 @@ class HelloCdkStack(Stack):
             name=web_key_name,
             description=web_key_desc,
             store_public_key=web_key_store)
-
-        webkey.grant_read_on_private_key(role)
-        webkey.grant_read_on_public_key(role)
 
         # ec2 instance creation for the webserver.
 
@@ -368,10 +373,10 @@ class HelloCdkStack(Stack):
         #     ]
         # )
 
-        self.asg = autoscaling.AutoScalingGroup(
+        asg = autoscaling.AutoScalingGroup(
             self, "WebServer",
             instance_type=ec2.InstanceType(webinstance_type),
-            associate_public_ip_address=False,
+            # associate_public_ip_address=False,
             machine_image=amzn_linux,
             security_group=Webserver_sg,
             vpc=vpc1,
@@ -383,85 +388,16 @@ class HelloCdkStack(Stack):
                                                          )
             )
             ],
-            # health_check=autoscaling.HealthCheck.ec2(
-            #     grace=cdk.Duration.minutes(2),
-            # ),
+            health_check=autoscaling.HealthCheck.ec2(
+                grace=cdk.Duration.minutes(2),
+            ),
             desired_capacity=1,
             min_capacity=1,
             max_capacity=3,
         )
 
-        self.asg.scale_on_cpu_utilization(
-            "scale_on_cpu",
-            target_utilization_percent=50
-        )
-
-        lb = elbv2.ApplicationLoadBalancer(
-            self, "lb_name",
-            vpc=vpc1,
-            internet_facing=True,
-            load_balancer_name="MyALB"
-        )
-
-
-        listener_certificate = elbv2.ListenerCertificate.from_arn(
-            "arn:aws:acm:eu-central-1:600563666729:certificate/a0f96b13-cd78-4305-a3df-f28430dac0a9")
-
-        tg = elbv2.ApplicationTargetGroup(
-            self, "tg_name",
-            vpc=vpc1,
-            port=80,
-            protocol=elbv2.ApplicationProtocol.HTTP,
-            target_type=elbv2.TargetType.INSTANCE,
-            targets=[self.asg],
-            health_check=elbv2.HealthCheck(
-                path="/index.html",
-                port="80",
-                protocol=elbv2.Protocol.HTTP
-            )
-        )
-
-        listener = lb.add_listener(
-            "listener_name",
-            certificates=[listener_certificate],
-            port=443,
-            default_target_groups=[tg],
-            protocol=elbv2.ApplicationProtocol.HTTPS,
-            open=True,
-            ssl_policy=SslPolicy.RECOMMENDED
-        )
-
-        Webserver_sg.connections.allow_from(listener, ec2.Port.tcp(wb_sg_http_port),
-                                            "Allow HTTP inbound traffic from ELB")
-        Webserver_sg.connections.allow_from(listener, ec2.Port.tcp(wb_sg_https_port),
-                                            "Allow HTTPS inbound traffic from ELB")
-
-        lb.add_redirect(
-            source_port=80,
-            target_port=443
-        )
-
-        # listener.add_targets(
-        #     "target_name",
-        #     port=80,
-        #     targets=[asg]
-        # protocol=elbv2.ApplicationProtocol.HTTP,
-        # targetType=elbv2.TargetType.INSTANCE,
-        # health_check=elbv2.HealthCheck(
-        #     path="/index.html",
-        #     port="80",
-        #     protocol=elbv2.Protocol.HTTP,
-        # )
-        # )
-
-        elb_sg = ec2.SecurityGroup(
-            self, "elb_sg",
-            vpc=vpc1,
-            description=wb_sg_description,
-            allow_all_outbound=wb_sg_ob
-        )
-
-        # listener.connections.allow_default_port_from_any_ipv4("AllowAll")
+        webkey.grant_read_on_private_key(asg.role)
+        webkey.grant_read_on_public_key(asg.role)
 
         # Add userdata to the webserver.
 
@@ -469,27 +405,58 @@ class HelloCdkStack(Stack):
                        path=webinstance_path
                        )
 
-        Local_path = self.asg.user_data.add_s3_download_command(
+        Local_path = asg.user_data.add_s3_download_command(
             bucket=assets.bucket,
             bucket_key=assets.s3_object_key,
             region=webinstance_region,
         )
 
-        self.asg.user_data.add_execute_file_command(
+        asg.user_data.add_execute_file_command(
             file_path=Local_path
         )
 
-        assets.grant_read(self.asg.role)
+        assets.grant_read(asg.role)
 
-        # elb_sg.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.tcp(wb_sg_http_port), wb_sg_http_desc)
+        lb = elbv2.ApplicationLoadBalancer(
+            self, "LB",
+            vpc=vpc1,
+            internet_facing=True)
 
-        elb_sg.add_ingress_rule(ec2.Peer.any_ipv4(), ec2.Port.all_traffic(), "Allow all traffic")
+        listener_certificate = elbv2.ListenerCertificate.from_arn(
+            "arn:aws:acm:eu-central-1:600563666729:certificate/a0f96b13-cd78-4305-a3df-f28430dac0a9")
 
-        listener.connections.add_security_group(elb_sg)
-        listener.connections.allow_from_any_ipv4(ec2.Port.tcp(80), "Allow HTTP inbound traffic from ELB")
+        listener = lb.add_listener(
+            "Listener",
+            port=443,
+            certificates=[listener_certificate],
+            ssl_policy=SslPolicy.RECOMMENDED
+        )
+
+        lb.add_redirect(
+            source_port=80,
+            target_port=443
+        )
+
+        listener.add_targets(
+            "Target",
+            port=80,
+            targets=[asg],
+            # health_check=elbv2.HealthCheck(
+            #         path="/index.html",
+            #         port="80",
+            #         protocol=elbv2.Protocol.HTTP
+            # )
+        )
+        listener.connections.allow_default_port_from_any_ipv4("Open to the world")
+
+        # asg.scale_on_request_count("AModestLoad", target_requests_per_minute=60)
+        asg.scale_on_cpu_utilization(
+            "scale_on_cpu",
+            target_utilization_percent=50
+        )
 
 
-'''
+
         # ec2 instance creation for the management server.
 
         ManagementServer = ec2.Instance(
@@ -508,6 +475,9 @@ class HelloCdkStack(Stack):
             )
             ]
         )
+
+        mmkey.grant_read_on_private_key(ManagementServer.role)
+        mmkey.grant_read_on_public_key(ManagementServer.role)
 
         # Webserver backup creation.
 
@@ -541,7 +511,7 @@ class HelloCdkStack(Stack):
             web_bk_name,
             backup_selection_name=web_bk_select,
             resources=[
-                bk.BackupResource.from_ec2_instance(Webserver)
+                bk.BackupResource.from_ec2_instance(asg)
             ]
         )
 
@@ -580,4 +550,4 @@ class HelloCdkStack(Stack):
                 bk.BackupResource.from_ec2_instance(ManagementServer)
             ]
         )
-'''
+

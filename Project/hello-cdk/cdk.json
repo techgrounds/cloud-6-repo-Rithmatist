@@ -42,7 +42,9 @@
             "max_az": 2,
             "cidr": "10.10.10.0/24",
             "subnet_name": "Public1",
-            "cidr_mask": 25
+            "cidr_mask": 27,
+            "private_subnet_name": "Private1",
+            "cidr_mask_private": 27
           },
           "managementserver_vpc": {
             "name": "managementserver_vpc",
