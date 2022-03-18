@@ -1,5 +1,6 @@
 *.swp
 package-lock.json
+arn.txt
 __pycache__
 .pytest_cache
 .venv

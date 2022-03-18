@@ -42,7 +42,9 @@
             "max_az": 2,
             "cidr": "10.10.10.0/24",
             "subnet_name": "Public1",
-            "cidr_mask": 25
+            "cidr_mask": 27,
+            "private_subnet_name": "Private1",
+            "cidr_mask_private": 27
           },
           "managementserver_vpc": {
             "name": "managementserver_vpc",
@@ -61,19 +63,17 @@
           "second_route": {
             "name": "MyCfnRoute2"
           },
-          "role": {
-            "name": "MyCfnRole",
-            "role_service_principal": "ec2.amazonaws.com",
-            "role_managed_policy_name": "AmazonSSMManagedInstanceCore"
-          },
           "management_security_group": {
             "name": "Management SecurityGroup",
             "description": "Allow ssh & RDP access to ec2 instances",
             "allow_all_outbound": true,
-            "ssh_allowed_ipv4": "45.145.110.104/32",
+            "allowed_ipv4": [
+              "45.145.110.104",
+              "45.145.110.105",
+              "45.145.110.106"
+            ],
             "ssh_allowed_port": 22,
             "ssh_port_description": "allow ssh access from the world",
-            "rdp_allowed_ipv4": "45.145.110.104/32",
             "rdp_allowed_port": 3389,
             "rdp_port_description": "allow RDP access from the world"
           },
@@ -81,10 +81,6 @@
             "name": "webserver_security_group",
             "description": "Allow ssh & RDP access to ec2 instances",
             "allow_all_outbound": true,
-            "http_allowed_port": 80,
-            "http_port_description": "allow http access from the world",
-            "https_allowed_port": 443,
-            "https_port_description": "allow https access from the world",
             "ssh_allowed_port": 22,
             "ssh_port_description": "allow ssh access from the management Security Group"
           },
@@ -101,13 +97,28 @@
           "webserver_instance": {
             "name": "WebserverInstance",
             "instance_type": "t2.micro",
-            "availability_zone": "eu-central-1a",
             "root_device_directory": "/dev/xvda",
             "volume_size": 8,
             "encrypted_volume": true,
             "asset_bucket": "Asset",
             "asset_path": "./userdata/userdata.sh",
             "asset_region": "eu-central-1"
+          },
+          "LoadBalancer": {
+            "name": "LoadBalancer",
+            "internet_facing": true,
+            "listener_name": "Listener",
+            "listener_port": 443,
+            "redirect_source_port": 80,
+            "redirect_target_port": 443,
+            "target_name": "Target",
+            "target_port": 80,
+            "cpu_utilization_name": "scale_on_cpu",
+            "target_utilization_percent": 50
+          },
+          "webserver_tags": {
+            "tag_key": "Web_key",
+            "tag_value": "Web_value"
           },
           "managementserver_instance": {
             "name": "ManagementServer",
