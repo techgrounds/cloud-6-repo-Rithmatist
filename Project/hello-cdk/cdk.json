@@ -63,6 +63,9 @@
           "second_route": {
             "name": "MyCfnRoute2"
           },
+          "third_route": {
+            "name": "MyCfnRoute3"
+          },
           "management_security_group": {
             "name": "Management SecurityGroup",
             "description": "Allow ssh & RDP access to ec2 instances",
