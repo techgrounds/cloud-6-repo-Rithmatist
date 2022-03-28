@@ -2,9 +2,7 @@
 # Portfolio van Chris.
 Dit is mijn portfolio.
 
-Cloud Engineer eindproject: v1.0 [Click here](./Project)
-
-Cloud Engineer eindproject v1.1: [Click here](https://github.com/rithmatist/cloud-6-repo-Rithmatist/tree/v1.1)
+Cloud Engineer eindproject v1.1: [Click here](https://github.com/Rithmatist/cloud-6-repo-Rithmatist/tree/v1.1/Project/)
 
 Overige Projecten: [Click here](https://gitfront.io/r/Rithmatist/8e05c02d5205eca7664f248f6afef0470169d330/MyProjects/)
 
