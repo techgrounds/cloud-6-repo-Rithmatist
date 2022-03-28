@@ -3,3 +3,4 @@
 *.doc
 *.docx
 *.gdoc
+/Project/hello-cdk/arn.txt

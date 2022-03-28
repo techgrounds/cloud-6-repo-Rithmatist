@@ -1,6 +1,9 @@
 #!/bin/bash
-
-yum -y install httpd
-systemctl enable httpd
-systemctl start httpd
-echo '<html><h1>Hello From Your Web Server!</h1></html>' > /var/www/html/index.html
+# Install Apache Web Server and PHP
+yum install -y httpd mysql php
+# Download Lab files
+wget https://aws-tc-largeobjects.s3.amazonaws.com/CUR-TF-100-RESTRT-1/80-lab-vpc-web-server/lab-app.zip
+unzip lab-app.zip -d /var/www/html/
+# Turn on web server
+chkconfig httpd on
+service httpd start
