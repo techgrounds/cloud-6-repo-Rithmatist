@@ -81,7 +81,7 @@
             "rdp_port_description": "allow RDP access from the world"
           },
           "webserver_security_group": {
-            "name": "webserver_security_group",
+            "name": "web_sg",
             "description": "Allow ssh & RDP access to ec2 instances",
             "allow_all_outbound": true,
             "ssh_allowed_port": 22,

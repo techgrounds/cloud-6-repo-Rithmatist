@@ -57,3 +57,4 @@ class VpcStack(cdk.NestedStack):
             )
             ]
         )
+

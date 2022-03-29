@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/Project/env" />
+      <excludeFolder url="file://$MODULE_DIR$/Project/eindproject/.venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (cloud-6-repo-Rithmatist) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

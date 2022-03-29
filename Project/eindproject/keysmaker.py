@@ -18,3 +18,4 @@ public_key = key.public_key().public_bytes(
     crypto_serialization.Encoding.OpenSSH,
     crypto_serialization.PublicFormat.OpenSSH
 )
+
