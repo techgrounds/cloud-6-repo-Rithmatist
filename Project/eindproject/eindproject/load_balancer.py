@@ -30,8 +30,8 @@ class LoadBalancer(cdk.NestedStack):
         lb_target_utilization_percent = lb_environment.get("target_utilization_percent")
 
         lb = elbv2.ApplicationLoadBalancer(
-            scope=scope,
-            id=lb_name,
+            self,
+            lb_name,
             vpc=vpc,
             # security_group=elb_sg,
             internet_facing=lb_internet_facing)
