@@ -9,6 +9,7 @@ class SecurityGroups(cdk.NestedStack):
     def __init__(self, scope: Construct, id: str,
                  vpc1: ec2.Vpc,
                  vpc2: ec2.Vpc,
+
                  **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
@@ -54,10 +55,4 @@ class SecurityGroups(cdk.NestedStack):
             security_group_name=wb_sg_name,
             description=wb_sg_description,
             allow_all_outbound=wb_sg_ob
-        )
-
-        self.Webserver_sg.add_ingress_rule(
-            peer=ec2.Peer.any_ipv4(),
-            connection=ec2.Port.tcp(80),
-            description="Allow HTTP traffic from the world"
         )

@@ -32,10 +32,11 @@ class ManagementServer(cdk.NestedStack):
         # Create a key pair for the management server.
 
         mm_key = KeyPair(
-            scope=scope,
-            id=mm_key_name,
+            self,
+            mm_key_name,
             name=mm_key_name,
             description=mm_key_desc,
+            resource_prefix="mm_key",
             store_public_key=mm_key_store)
 
         windows = ec2.MachineImage.latest_windows(ec2.WindowsVersion.WINDOWS_SERVER_2019_ENGLISH_FULL_BASE)
@@ -56,4 +57,7 @@ class ManagementServer(cdk.NestedStack):
             )
             ]
         )
+
+        mm_key.grant_read_on_private_key(self.ManagementServer.role)
+        mm_key.grant_read_on_public_key(self.ManagementServer.role)
 

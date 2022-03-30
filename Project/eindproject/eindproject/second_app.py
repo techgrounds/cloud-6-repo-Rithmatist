@@ -4,7 +4,7 @@ import aws_cdk as cdk
 from constructs import Construct
 from aws_cdk import (
     aws_autoscaling as autoscaling,
-    aws_ec2 as ec2,
+    aws_ec2 as ec2
 )
 
 
@@ -34,10 +34,11 @@ class WebServer(cdk.NestedStack):
         # Create a key pair for the webserver.
 
         web_key = KeyPair(
-            scope=scope,
-            id=web_key_name,
+            self,
+            web_key_name,
             name=web_key_name,
             description=web_key_desc,
+            resource_prefix="web_key",
             store_public_key=web_key_store)
 
         aws_linux = ec2.MachineImage.latest_amazon_linux(
@@ -67,6 +68,9 @@ class WebServer(cdk.NestedStack):
             max_capacity=3,
         )
 
+        web_key.grant_read_on_private_key(self.asg.role)
+        web_key.grant_read_on_public_key(self.asg.role)
+
         assets = Asset(self, web_instance_asset,
                        path=web_instance_path
                        )
@@ -80,3 +84,5 @@ class WebServer(cdk.NestedStack):
         self.asg.user_data.add_execute_file_command(
             file_path=Local_path
         )
+
+        assets.grant_read(self.asg.role)
