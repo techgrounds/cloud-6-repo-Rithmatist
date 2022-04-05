@@ -90,16 +90,19 @@
           "management_key_pair": {
             "name": "ManagementKeyPair",
             "description": "ManagementKeyPair",
+            "resource_prefix": "mm_key",
             "store_public_key": true
           },
           "webserver_key_pair": {
             "name": "WebserverKeyPair",
             "description": "WebserverKeyPair",
+            "resource_prefix": "web_key",
             "store_public_key": true
           },
           "webserver_instance": {
             "name": "WebserverInstance",
             "instance_type": "t2.micro",
+            "scale_in_protection:": false,
             "root_device_directory": "/dev/xvda",
             "volume_size": 8,
             "encrypted_volume": true,

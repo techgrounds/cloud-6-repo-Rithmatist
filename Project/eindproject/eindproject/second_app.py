@@ -19,11 +19,13 @@ class WebServer(cdk.NestedStack):
         web_key_env = environments.get('webserver_key_pair')
         web_key_name = web_key_env.get('name')
         web_key_desc = web_key_env.get('description')
+        web_key_prefix = web_key_env.get('resource_prefix')
         web_key_store = web_key_env.get('store_public_key')
 
         web_instance_environment = environments.get("webserver_instance")
         web_instance_name = web_instance_environment.get("name")
         web_instance_type = web_instance_environment.get("instance_type")
+        web_instance_protected = web_instance_environment.get("scale_in_protection")
         web_instance_root = web_instance_environment.get("root_device_directory")
         web_instance_size = web_instance_environment.get("volume_size")
         web_instance_encrypt = web_instance_environment.get("encrypted_volume")
@@ -38,7 +40,7 @@ class WebServer(cdk.NestedStack):
             web_key_name,
             name=web_key_name,
             description=web_key_desc,
-            resource_prefix="web_key",
+            resource_prefix=web_key_prefix,
             store_public_key=web_key_store)
 
         aws_linux = ec2.MachineImage.latest_amazon_linux(
@@ -56,6 +58,7 @@ class WebServer(cdk.NestedStack):
             security_group=Webserver_sg,
             vpc=vpc,
             key_name=web_key.key_pair_name,
+            new_instances_protected_from_scale_in=web_instance_protected,
             block_devices=[autoscaling.BlockDevice(
                 device_name=web_instance_root,
                 volume=autoscaling.BlockDeviceVolume.ebs(web_instance_size,

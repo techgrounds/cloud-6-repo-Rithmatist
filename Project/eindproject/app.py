@@ -10,30 +10,42 @@ from eindproject.vpcs import VpcStack
 import aws_cdk as cdk
 
 app = cdk.App()
-main = cdk.Stack(app, "main", env=cdk.Environment(account='600563666729', region='eu-central-1'))
-s3bucket = S3BucketStack(main, "S3 Bucket App")
-skeleton = VpcStack(main, "vpc app")
+StackName = "main"
+account = "600563666729"
+region = "eu-central-1"
+ManagementServerStackName = "Management Server App"
+SecurityGroupStackName = "Security Group App"
+LoadBalancerStackName = "Load Balancer App"
+VpcPeeringStackName = "VPC Peering App"
+WebServerStackName = "Web Server App"
+S3BucketStackName = "S3 Bucket App"
+BackupStackName = "Backup App"
+VpcStackName = "VPC App"
+
+main = cdk.Stack(app, StackName, env=cdk.Environment(account=account, region=region))
+s3bucket = S3BucketStack(main, S3BucketStackName)
+skeleton = VpcStack(main, VpcStackName)
 sg_app = SecurityGroups(
     main,
-    "Security Groups",
+    SecurityGroupStackName,
     vpc1=skeleton.vpc1,
     vpc2=skeleton.vpc2
 )
 first_app = ManagementServer(
     main,
-    "Management Server",
+    ManagementServerStackName,
     Management_sg=sg_app.Management_sg,
     vpc=skeleton.vpc2
 )
 second_app = WebServer(
     main,
-    "Web Server",
+    WebServerStackName,
     Webserver_sg=sg_app.Webserver_sg,
     vpc=skeleton.vpc1
 )
 vpc_peering = VpcPeeringStack(
     main,
-    "Vpc Peering App",
+    VpcPeeringStackName,
     vpc1=skeleton.vpc1,
     vpc2=skeleton.vpc2,
     Webserver_sg=sg_app.Webserver_sg,
@@ -41,13 +53,13 @@ vpc_peering = VpcPeeringStack(
 )
 elb_app = LoadBalancer(
     main,
-    "Load Balancer",
+    LoadBalancerStackName,
     vpc=skeleton.vpc1,
     asg=second_app.asg
 )
 Backup_app = BackupStack(
     main,
-    "Backup App",
+    BackupStackName,
     ManagementServer=first_app.ManagementServer,
     asg=second_app.asg
 )

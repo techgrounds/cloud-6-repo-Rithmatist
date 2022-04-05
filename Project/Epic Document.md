@@ -12,6 +12,7 @@
 - [Klant wil iedere dag een backup, met bewaartermijn van 7 dagen](https://github.com/techgrounds/cloud-6-repo-Rithmatist/blob/main/Project/Epic%20Document.md#klant-wil-iedere-dag-een-backup-met-bewaartermijn-van-7-dagen-epic---09)
 - [Klant wil weten hoe hij/zij de applicatie kan gebruiken](https://github.com/techgrounds/cloud-6-repo-Rithmatist/blob/main/Project/Epic%20Document.md#klant-wil-weten-hoe-hijzij-de-applicatie-kan-gebruiken-epic---10)
 - [Klant wil de MVP kunnen deployen om te testen](https://github.com/techgrounds/cloud-6-repo-Rithmatist/blob/main/Project/Epic%20Document.md#klant-wil-de-mvp-kunnen-deployen-om-te-testen-epic---11)
+- [MPV v1.1 n.a.v. aanpassingen/aanvullingen van de klant]()
 
 ## Wat zijn de eisen (Epic - 01)
 | Item                | Opmerking                                                                                                                                                                                                    |
@@ -217,3 +218,29 @@ Voor zowel de Webserver en de Management-server is er een Backup dienst aangemaa
 | Acceptatie criteria | Als de user aangeeft dat het werkt                                                                                                                            |
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-Rithmatist/blob/main/Project/Epic%20Document.md#inhoud)
+## MPV v1.1 aanpassingen/aanvullingen van de klant
+**Doel:**  
+
+   | Item       | Opmerking                                                                                          |
+   | ---------- | -------------------------------------------------------------------------------------------------- |
+   | Visie      | MPV v1.1 aanpassingen/aanvullingen van de klant                                             |
+   | Doelen     | Opleveren van een werkende MVP v1.1 script. |
+   | Persona(s) | Product Owner, DevOps Team                                                                         |
+
+**Releases:**
+
+   | Item             | Opmerking                                             |
+   | ---------------- | ----------------------------------------------------- |
+   | Release          | MVP v1.1                                              |
+   | Datum            | 08-04-2022                                            |
+   | Initiatief       | Aanpassingen/aanvullingen op MVP v1.0                 |
+   | Mijlpalen        | 25-03-2022 Tussentijdse voortgangsrapportage MVP v1.1 |
+   |                  | 08-04-2022 MVP v1.1 opgeleverd     |
+   | Kenmerken        | Aanpassingen zijn vooral gericht op de Webserver omgeving       |
+   | Afhankelijkheden | IaC, Python, AWs CDK, eisen Product Owner             |
+
+[naar boven](https://github.com/techgrounds/cloud-6-repo-Rithmatist/blob/main/Project/Epic%20Document.md#inhoud)
+
+**Diagram:**
+
+![mvp1.1](../00_includes/finalversion.JPG)

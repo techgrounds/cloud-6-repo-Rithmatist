@@ -17,6 +17,7 @@ class ManagementServer(cdk.NestedStack):
         mm_key_env = environments.get('management_key_pair')
         mm_key_name = mm_key_env.get('name')
         mm_key_desc = mm_key_env.get('description')
+        mm_key_prefix = mm_key_env.get('resource_prefix')
         mm_key_store = mm_key_env.get('store_public_key')
 
         mm_instance_environment = environments.get("managementserver_instance")
@@ -36,7 +37,7 @@ class ManagementServer(cdk.NestedStack):
             mm_key_name,
             name=mm_key_name,
             description=mm_key_desc,
-            resource_prefix="mm_key",
+            resource_prefix=mm_key_prefix,
             store_public_key=mm_key_store)
 
         windows = ec2.MachineImage.latest_windows(ec2.WindowsVersion.WINDOWS_SERVER_2019_ENGLISH_FULL_BASE)

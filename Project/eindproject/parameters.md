@@ -42,3 +42,15 @@
 |   cron_month	|   Cron tijd maand |
 |    cron_week_day	|  Cron tijd weekdag 	|
 | 	 backup_selection_name   |   De naam voor deze selectie.    |
+|   tag_key    |   Tag sleutel van Webserver  |
+|   tag_value  | Tag waarde van Webserver |
+|   resource_prefix    |   Naam van resource prefix   |
+|   internet_facing    |    Of de loadbalancer een internet-routerbaar adres heeft. |
+|   listener_name  |    Naam van luisteraar.    |
+|   listener_port  |    De poort waarop de luisteraar luistert voor verzoeken.  |
+|   redirect_source_port   |    Het poortnummer om naar te luisteren.   |
+|   redirect_target_port   |    Het poortnummer waarnaar moet worden omgeleid. |
+|   target_name    |    Naam van load balancing doelstellingen  |
+|   target_port    |    De poort waarop de luisteraar luistert voor verzoeken. |
+|   cpu_utilization_name   |    Naam van doel CPU-gebruik   |
+|   target_utilization_percent |    Gewenst gemiddeld CPU-gebruik voor de hele taak.    |
