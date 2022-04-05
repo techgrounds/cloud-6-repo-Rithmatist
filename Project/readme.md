@@ -4,8 +4,12 @@ In deze folder is alle informatie te vinden over het Project wat de komende weke
 ### Project Document
 [PRO-01 Project.](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) 
 
+[PRO-1.1 Project.](https://docs.google.com/document/d/1CT8AtpS_o81EeGhCEzPSn8XVu-lkvngzHyz8zWnoGmE/edit)
+
 ### Project Requirements Document
-[Project Requirements Document](../Project/Product_Requirements_Document.md).
+[Project Requirements Document.](../Project/Product_Requirements_Document.md)
+
+[Project Requirements Document v1.1.](../Project/Product_Requirements_Document_v1.1.md)
 
 ### JIRA
 In Jira is een Roadmap aangemaakt voor het project. Op basis van de Epics is deze samengesteld.

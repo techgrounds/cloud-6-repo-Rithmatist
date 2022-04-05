@@ -3,8 +3,6 @@
 
 Dit is een leeg project voor Python ontwikkeling met CDK.
 
-## MVP 1.1
-In het document [Project v1.1](https://docs.google.com/document/d/1CT8AtpS_o81EeGhCEzPSn8XVu-lkvngzHyz8zWnoGmE/edit) zijn de aanpassingen/aanvullingen op versie 1.0 van het project beschreven.
 
 Het `cdk.json` bestand vertelt de CDK Toolkit hoe uw app uitgevoerd moet worden.
 
